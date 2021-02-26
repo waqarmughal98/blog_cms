@@ -3,6 +3,8 @@
     // Run Queries
     $queries = new Queries;
 ?>
+	<!-- Bootstrap Dropify CSS -->
+	<link href="../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<!--sidebar-->
@@ -44,14 +46,14 @@
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Title</label>
-															<input type="text" id="firstName" class="form-control" placeholder="Enter your title">
+															<input type="text" id="firstName" name="title" class="form-control" placeholder="Enter your title">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta title</label>
-															<input type="text" id="lastName" class="form-control" placeholder="Enter meta title">
+															<input type="text" id="lastName" name="meta_title" class="form-control" placeholder="Enter meta title">
 														</div>
 													</div>
 													<!--/span-->
@@ -61,18 +63,17 @@
                                                     <div class="col-md-12">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta description</label>
-                                                            <textarea class="form-control" name="meta_description_en" rows="2" cols="80" placeholder="Meta Description"></textarea>
+                                                            <textarea class="form-control" name="meta_description" rows="2" cols="80" placeholder="Meta Description"></textarea>
 														</div>
 													</div>
                                                 </div>
 												<!-- Row -->
-                                                <div class="seprator-block"></div>
-												<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-comment-text mr-10"></i>Post Description</h6>
+												<h6 class="txt-dark capitalize-font mt-15"><i class="zmdi zmdi-comment-text mr-10"></i>Post Description</h6>
 												<hr class="light-grey-hr"/>
 												<div class="row">
 													<div class="col-md-12">
 														<div class="form-group">
-															<textarea class="form-control" rows="4"></textarea>
+															<textarea name="description" class="form-control tinymce"></textarea>
 														</div>
 													</div>
 												</div>
@@ -80,19 +81,29 @@
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
-															<label class="control-label mb-10">Category</label>
-															<select class="form-control" data-placeholder="Choose a Category" tabindex="1">
-																<option value="Category 1">Category 1</option>
-																<option value="Category 2">Category 2</option>
-																<option value="Category 3">Category 5</option>
-																<option value="Category 4">Category 4</option>
+															<label class="control-label mt-10 mb-10">Category</label>
+															<select name="category" class="form-control" data-placeholder="Choose a Category">
+																<option value="" selected disabled>Please Select Category</option>
+																<?php
+																$selcat = "SELECT * FROM `categories` WHERE domain='$domain'";
+																$queries->query($selcat);
+																if($queries->count() > 0):
+																	while($fetchcat = $queries->fetch()):
+																		$id = $fetchcat->id;
+                                                                    	$category = $fetchcat->category_name;
+																?>
+																<option value="<?php echo $category; ?>"><?php echo $category; ?></option>
+																<?php
+																	endwhile;
+																endif;
+																?>
 															</select>
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6">
 														<div class="form-group">
-															<label class="control-label mb-10">Status</label>
+															<label class="control-label mt-10 mb-10">Status</label>
 															<div class="radio-list">
 																<div class="radio-inline pl-0">
 																	<div class="radio radio-info">
@@ -113,40 +124,17 @@
 												</div>
 												<!--/row-->
 												<div class="row">
-													<div class="col-md-6">
+													<div class="col-md-6 mt-10">
 														<div class="form-group">
-															<label class="control-label mb-10">Price</label>
-															<div class="input-group">
-																<div class="input-group-addon"><i class="ti-money"></i></div>
-																<input type="text" class="form-control" id="exampleInputuname" placeholder="153">
-															</div>
+															<label class="control-label mb-10">Tags <span class="text-danger">[Please Add (,) comma sign between tags]</span></label>
+															<input name="tags" type="text" class="form-control">
 														</div>
 													</div>
 													<!--/span-->
-													<div class="col-md-6">
+													<div class="col-md-6 mt-10">
 														<div class="form-group">
-															<label class="control-label mb-10">Discount</label>
-															<div class="input-group">
-																<div class="input-group-addon"><i class="ti-cut"></i></div>
-																<input type="text" class="form-control" id="exampleInputuname_1" placeholder="36%">
-															</div>
-														</div>
-													</div>
-													<!--/span-->
-												</div>
-												<!--/row-->
-												<div class="row">
-													<div class="col-md-6">
-														<div class="form-group">
-															<label class="control-label mb-10">Meta Title</label>
-															<input type="text" class="form-control">
-														</div>
-													</div>
-													<!--/span-->
-													<div class="col-md-6">
-														<div class="form-group">
-															<label class="control-label mb-10">Meta Keyword</label>
-															<input type="text" class="form-control">
+															<label class="control-label mb-10">Seo Url</label>
+															<input name="seo_url" type="text" class="form-control">
 														</div>
 													</div>
 												</div>
@@ -156,104 +144,15 @@
 												<div class="row">
 													<div class="col-lg-12">
 														<div class="img-upload-wrap">
-															<img class="img-responsive" src="../img/chair.jpg" alt="upload_img"> 
-														</div>
-														<div class="fileupload btn btn-info btn-anim"><i class="fa fa-upload"></i><span class="btn-text">Upload new image</span>
-															<input type="file" class="upload">
+															<input type="file" name="featured" id="input-file-now" class="dropify">
 														</div>
 													</div>
 												</div>
-												<div class="seprator-block"></div>
-												<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-calendar-note mr-10"></i>general info</h6>
 												<hr class="light-grey-hr"/>
-												
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Brand">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Stellar">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Delivery Condition">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Knock Down">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Seat Lock Included">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Yes">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Type">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Office Chair">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Style">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Contemporary & Modern">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Wheels Included">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Yes">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Upholstery Included">
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div class="form-group">
-															<input type="text" class="form-control" placeholder="Yes">
-														</div>
-													</div>
-												</div>
+
 												<div class="form-actions">
-													<button class="btn btn-success btn-icon left-icon mr-10 pull-left"> <i class="fa fa-check"></i> <span>save</span></button>
-													<button type="button" class="btn btn-warning pull-left">Cancel</button>
+													<button class="btn btn-success btn-icon left-icon mr-10 pull-left" name="publish"> <i class="fa fa-check"></i> <span>Publish</span></button>
+													<!-- <button type="button" class="btn btn-warning pull-left">Cancel</button> -->
 													<div class="clearfix"></div>
 												</div>
 											</form>
@@ -264,10 +163,73 @@
 						</div>
 					</div>
 					<!-- /Row -->
+					<?php
+						if(isset($_POST['publish'])):
+							$title = htmlentities($_POST['title']);
+							$meta_title = htmlentities($_POST['meta_title']);
+							$meta_description = htmlentities($_POST['meta_description']);
+							$description = $_POST['description'];
+							$category = $_POST['category'];
+							$tags = $_POST['tags'];
+							$featured = $_FILES['featured'];
+							
+							// Seo Url
+                            $seoUrl = $_POST['seo_url'];
+                            
+                            // Make Seo Friendly Url
+                            function seoUrl($seoUrl) {
+                                //Lower case everything
+                                $seoUrl = strtolower($seoUrl);
+                                //Make alphanumeric (removes all other characters)
+                                $seoUrl = preg_replace("/[^a-z0-9_\s-]/", "", $seoUrl);
+                                //Clean up multiple dashes or whitespaces
+                                $seoUrl = preg_replace("/[\s-]+/", " ", $seoUrl);
+                                //Convert whitespaces and underscore to dash
+                                $seoUrl = preg_replace("/[\s_]/", "-", $seoUrl);
+                                return $seoUrl;
+                            }
+                            $url = seoUrl($seoUrl);
+							
+							// Validate Seo Url
+                            $checkUrl = "SELECT * FROM posts WHERE seo_url='$url'";
+                            $queries->query($checkUrl);
+                            if($queries->count() > 0):
+                                echo("<script> alert('Url is alredy exist, Please try another Url'); </script>");
+                                exit();
+                            endif;
+							//date
+							$date = date("l-d-m-y");
 
+							// Featured Image
+							$target_dir = "upload/";
+							$target_file = $target_dir . basename($_FILES["featured"]["name"]);
+							move_uploaded_file($_FILES["featured"]["tmp_name"], $target_dir.$_FILES['featured']['name']);
+							
+                            //$uploaddir = "../" . $domain . "content/images/posts/";
+                            //$imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
+                            //move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $imageName1);
+
+						endif;
+					?>
 				</div>
 				
 				<!-- Footer -->
+<!-- jQuery -->
+<script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Daterangepicker JavaScript -->
+<script src="../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+
+<!-- Form Flie Upload Data JavaScript -->
+<script src="dist/js/form-file-upload-data.js"></script>
+
+<!-- Tinymce JavaScript -->
+<script src="../vendors/bower_components/tinymce/tinymce.min.js"></script>
+			
+<!-- Tinymce Wysuhtml5 Init JavaScript -->
+<script src="dist/js/tinymce-data.js"></script>
+
+
 <?php
     require_once('admin/assets/footer.php');
 ?>

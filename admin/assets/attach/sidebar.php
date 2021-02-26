@@ -86,6 +86,9 @@
 					<a href="/admin/add-media"><div class="pull-left"><i class="fa fa-picture-o mr-20"></i><span class="right-nav-text">Add Media</span></div><div class="clearfix"></div></a>
 				</li>
 				<li>
+					<a href="/admin/add-post"><div class="pull-left"><i class="fa fa-pencil-square-o mr-20"></i><span class="right-nav-text">Add Post</span></div><div class="clearfix"></div></a>
+				</li>
+				<li>
 					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">E-Commerce</span></div><div class="pull-right"><span class="label label-success">hot</span></div><div class="clearfix"></div></a>
 					<ul id="ecom_dr" class="collapse collapse-level-1">
 						<li>

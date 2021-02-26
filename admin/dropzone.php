@@ -1203,7 +1203,7 @@
 										<div class="mt-40">
 											<form action="upload.php" class="dropzone">
 												<div class="fallback">
-													<input name="file" type="file" multiple />
+													<input name="file" type="file"/>
 												</div>
 											</form>
 										</div>
