@@ -4,7 +4,8 @@
     $queries = new Queries;
 ?>
 	<!-- Bootstrap Dropify CSS -->
-	<link href="../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+	<!-- <link href="../vendors/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/> -->
+	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
 	</head>
 	<body>
 		<!--sidebar-->
@@ -46,14 +47,14 @@
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Title</label>
-															<input type="text" id="firstName" name="title" class="form-control" placeholder="Enter your title">
+															<input type="text" id="firstName" name="title" class="form-control" placeholder="Enter your title" required>
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta title</label>
-															<input type="text" id="lastName" name="meta_title" class="form-control" placeholder="Enter meta title">
+															<input type="text" id="lastName" name="meta_title" class="form-control" placeholder="Enter meta title" required>
 														</div>
 													</div>
 													<!--/span-->
@@ -63,7 +64,7 @@
                                                     <div class="col-md-12">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta description</label>
-                                                            <textarea class="form-control" name="meta_description" rows="2" cols="80" placeholder="Meta Description"></textarea>
+                                                            <textarea class="form-control" name="meta_description" rows="2" cols="80" placeholder="Meta Description" required></textarea>
 														</div>
 													</div>
                                                 </div>
@@ -73,7 +74,7 @@
 												<div class="row">
 													<div class="col-md-12">
 														<div class="form-group">
-															<textarea name="description" class="form-control tinymce"></textarea>
+															<textarea name="description" class="form-control tinymce" required></textarea>
 														</div>
 													</div>
 												</div>
@@ -126,14 +127,14 @@
 												<div class="row">
 													<div class="col-md-6 mt-10">
 														<div class="form-group">
-															<label class="control-label mb-10">Tags <span class="text-danger">[Please Add (,) comma sign between tags]</span></label>
+															<label class="control-label mb-10" required>Tags <span class="text-danger">[Please Add (,) comma sign between tags]</span></label>
 															<input name="tags" type="text" class="form-control">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6 mt-10">
 														<div class="form-group">
-															<label class="control-label mb-10">Seo Url</label>
+															<label class="control-label mb-10" required>Seo Url</label>
 															<input name="seo_url" type="text" class="form-control">
 														</div>
 													</div>
@@ -144,7 +145,7 @@
 												<div class="row">
 													<div class="col-lg-12">
 														<div class="img-upload-wrap">
-															<input type="file" name="featured" accept="image/jpeg">
+															<input type="file" name="featured" class="filepond">
 														</div>
 													</div>
 												</div>
@@ -219,11 +220,17 @@
 <!-- jQuery -->
 <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
 
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+<script>
+	FilePond.parse(document.body);
+</script>
+
 <!-- Bootstrap Daterangepicker JavaScript -->
-<script src="../vendors/bower_components/dropify/dist/js/dropify.min.js"></script>
+<!-- <script src="../vendors/bower_components/dropify/dist/js/dropify.min.js"></script> -->
 
 <!-- Form Flie Upload Data JavaScript -->
-<script src="dist/js/form-file-upload-data.js"></script>
+<!-- <script src="dist/js/form-file-upload-data.js"></script> -->
 
 <!-- Tinymce JavaScript -->
 <script src="../vendors/bower_components/tinymce/tinymce.min.js"></script>

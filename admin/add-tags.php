@@ -135,29 +135,28 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            
+                                                        <tr>
                                                             <?php
-                                                            $selectcat = "SELECT * FROM `tags` WHERE domain='$domain'";
-                                                            $queries->query($selectcat);
+                                                            $tagsArray = [];
+                                                            $getTags = "SELECT * FROM `tags` WHERE domain='$domain'";
+                                                            $queries->query($getTags);
                                                             if($queries->count() > 0):
-                                                                while($fetchcat = $queries->fetch()):
-                                                                    $id = $fetchcat->id;
-                                                                    $tags = $fetchcat->tags;
-                                                            ?>
-                                                            <tr>
-                                                                <!-- <td class="title"><a class="pull-left" href="javascript:void(0)"><?php echo $tags; ?></a> <button class="btn btn-danger pull-right">DELETE</button></td> -->
-                                                                <td class="title"><a class="pull-left" href="javascript:void(0)"><?php echo $tags; ?></a> <button class="btn-nobg pull-right" value="<?php echo $id;?>" name="del"><i class="fa fa-close"></i></button></td>
-                                                            </tr>
-                                                            <?php
-                                                                endwhile;
-                                                            endif;
-                                                            if(isset($_POST['del'])):
-                                                                $id=$_POST['del'];
-                                                                $delquery = "DELETE FROM `tags` WHERE id='$id'";
-                                                                $queries->query($delquery);
-                                                                echo '<script>alert("Tag Deleted!!")</script>';
-                                                                echo '<script>window.location.href="add-tags.php";</script>';
+                                                                while($fetchtag = $queries->fetch()){
+                                                                    $tags = $fetchtag->tags;
+                                                                    $parts = explode(',', $tags);
+                                                                    foreach ($parts as $tag) {
+                                                                        $tagsArray[] = $tag;
+                                                                    }
+                                                                }
+                                                        
+                                                                $finalTags = array_unique($tagsArray);
+                                                                foreach ($finalTags as $tag) {
+                                                                    echo "<td class='title'><a class='pull-left' href='javascript:void(0)'>". ucwords($tag) ."</a> <button class='btn-nobg pull-right' value='". ucwords($tag) ."' name='del'><i class='fa fa-close'></i></button></td>";
+                                                                }
                                                             endif;
                                                             ?>
+                                                        </tr>
                                                         </tbody>
                                                     </table>
                                                 </form>

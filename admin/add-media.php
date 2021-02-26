@@ -41,7 +41,7 @@
 									<div class="panel-body">
 										<p class="text-muted"> For multiple file upload add <code>dropzone</code> in form tag and add <code>multiple</code> in input tag.</p>
 										<div class="mt-40">
-											<form action="upload.php" class="dropzone" enctype='multipart/form-data'>
+											<form action="/admin/upload.php" id="multipleImagesDrop" class="dropzone">
 												<!-- <div class="fallback">
 													<input name="file" type="file" multiple />
 												</div> -->
@@ -65,3 +65,17 @@
 <?php
 	require_once('assets/attach/footer.php');
 ?>
+
+<script>
+Dropzone.autoDiscover = false;
+$(function(){
+    // Dropzone Multiple Image
+    var myDropzoneMultiple = new Dropzone("#multipleImagesDrop", {
+        url: '/admin/upload.php',
+        paramName: 'file',
+        maxFilesize: 2,
+        maxFiles: 10,
+        acceptedFiles: '.jpg, .jpeg, .png, .svg'
+    });
+});
+</script>
