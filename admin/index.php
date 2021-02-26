@@ -359,5 +359,5 @@
 			
 			<!-- Footer -->
 <?php
-	require_once('assets/attach/footer.php');
+	include_once('assets/attach/footer.php');
 ?>

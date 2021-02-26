@@ -144,7 +144,7 @@
 												<div class="row">
 													<div class="col-lg-12">
 														<div class="img-upload-wrap">
-															<input type="file" name="featured" id="input-file-now" class="dropify">
+															<input type="file" name="featured" accept="image/jpeg">
 														</div>
 													</div>
 												</div>
@@ -200,15 +200,17 @@
 							//date
 							$date = date("l-d-m-y");
 
-							// Featured Image
-							$target_dir = "upload/";
-							$target_file = $target_dir . basename($_FILES["featured"]["name"]);
-							move_uploaded_file($_FILES["featured"]["tmp_name"], $target_dir.$_FILES['featured']['name']);
-							
-                            //$uploaddir = "../" . $domain . "content/images/posts/";
-                            //$imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
-                            //move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $imageName1);
+							// Featured Image							
+                            $uploaddir = "../cryptoinject/images/";
+                            $image = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
+                            move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $image);
 
+							$insertBlog = "INSERT INTO posts (`title`, `description`, `meta_title`, `meta_description`, `category_id`, `sub_category_id`, `image`, `seo_url`, `date`, `domain`, `tags`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+							$paramBlog = [$title,$description,$meta_title,$meta_description,$category,NULL,$image,$url,$date,$domain,$tags];
+							if($queries->query($insertBlog,$paramBlog)):
+								echo '<script>alert("Post Added!");</script>';
+							endif;
+							echo("<script> window.open('add-post.php','_self'); </script>");
 						endif;
 					?>
 				</div>
