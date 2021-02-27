@@ -1,7 +1,11 @@
 <?php
 	require_once('assets/attach/top.php');
 ?>
-<link href="../vendors/bower_components/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/>
+	<!-- <link href="../vendors/bower_components/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
+
 	</head>
 	<body>
 <?php
@@ -41,10 +45,8 @@
 									<div class="panel-body">
 										<p class="text-muted"> For multiple file upload add <code>dropzone</code> in form tag and add <code>multiple</code> in input tag.</p>
 										<div class="mt-40">
-											<form action="/admin/upload.php" id="multipleImagesDrop" class="dropzone">
-												<!-- <div class="fallback">
-													<input name="file" type="file" multiple />
-												</div> -->
+											<form action="upload.php" name="file" id="dropzoneFrom" class="dropzone">
+												
 											</form>
 										</div>
 									</div>
@@ -57,11 +59,15 @@
 				</div>
 				
 <!-- Footer -->
+<!-- jQuery -->
+<script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Dropzone JavaScript -->
-<script src="../vendors/bower_components/dropzone/dist/dropzone.js"></script>
+<!-- <script src="../vendors/bower_components/dropzone/dist/dropzone.js"></script> -->
+
 <?php
 	require_once('assets/attach/footer.php');
 ?>
@@ -70,8 +76,8 @@
 Dropzone.autoDiscover = false;
 $(function(){
     // Dropzone Multiple Image
-    var myDropzoneMultiple = new Dropzone("#multipleImagesDrop", {
-        url: '/admin/upload.php',
+    var myDropzoneMultiple = new Dropzone("#dropzoneFrom", {
+        url: 'upload.php',
         paramName: 'file',
         maxFilesize: 2,
         maxFiles: 10,

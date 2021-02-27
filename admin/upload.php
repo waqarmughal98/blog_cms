@@ -12,7 +12,7 @@
 //    move_uploaded_file($tempFile,$targetFile); //6
 
             // File path configuration
-            $uploadDir = "/admin/upload/";
+            $uploadDir = "upload/";
             $fileName = basename($_FILES['file']['name']);
             $uploadFilePath = $uploadDir.$fileName;
             // Upload file to server
