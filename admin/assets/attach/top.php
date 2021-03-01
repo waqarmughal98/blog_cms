@@ -6,6 +6,7 @@ require_once("assets/config/queries.php");
 // require_once("assets/config/sendemail.php");
 session_start();
 ob_start();
+$queries = new Queries;
 //Domain
 $domain = "cryptoinject.com";
 // Show Errors

@@ -64,6 +64,16 @@
 	<!-- Switchery JavaScript -->
 	<script src="../vendors/bower_components/switchery/dist/switchery.min.js"></script>
 	
+	<!-- Tinymce JavaScript -->
+	<script src="../vendors/bower_components/tinymce/tinymce.min.js"></script>		
+
+	<!-- Summernote Plugin JavaScript -->
+	<script src="../vendors/bower_components/summernote/dist/summernote.min.js"></script>
+		
+	<!-- Summernote Wysuhtml5 Init JavaScript -->
+	<script src="dist/js/summernote-data.js"></script>
+				
+
 	<!-- Init JavaScript -->
 	<script src="dist/js/init.js"></script>
 	<script src="dist/js/dashboard5-data.js"></script>
