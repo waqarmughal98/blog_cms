@@ -235,13 +235,14 @@
                             }
                             $url = seoUrl($seoUrl);
 							
-							// Validate Seo Url
-                            $checkUrl = "SELECT * FROM posts WHERE seo_url='$url'";
+                            // Validate Seo Url
+                            $checkUrl = "SELECT * FROM `posts` WHERE seo_url='$url' AND id!='$gid'";
                             $queries->query($checkUrl);
                             if($queries->count() > 0):
                                 echo("<script> alert('Url is alredy exist, Please try another Url'); </script>");
                                 exit();
                             endif;
+
 							//date
 							$date = date("l-d-m-y");
 
@@ -260,7 +261,7 @@
 							if($queries->query($insertBlog,$paramBlog)):
 								echo '<script>alert("Post Added!");</script>';
 							endif;
-							echo("<script> window.open('add-post.php','_self'); </script>");
+							echo("<script> window.open('all-posts.php','_self'); </script>");
 						endif;
 					?>
 
