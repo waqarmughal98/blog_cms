@@ -21,20 +21,43 @@
 					<!-- Title -->
 					<div class="row heading-bg">
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-						  <h5 class="txt-dark">Add-Post</h5>
+						  <h5 class="txt-dark">Edit-Post</h5>
 						</div>
 						<!-- Breadcrumb -->
 						<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
 						  <ol class="breadcrumb">
 							<li><a href="index.html">Dashboard</a></li>
 							<li><a href="#"><span>e-commerce</span></a></li>
-							<li class="active"><span>add-post</span></li>
+							<li class="active"><span>edit-post</span></li>
 						  </ol>
 						</div>
 						<!-- /Breadcrumb -->
 					</div>
 					<!-- /Title -->
 					
+                    <?php
+                        if(isset($_GET['id'])):
+                            $gid = $_GET['id'];
+                            $selectpost = "SELECT * FROM posts WHERE id='$gid' AND domain='$domain'";
+                            $queries->query($selectpost);
+                            if($queries->count() > 0):
+                                $old = $queries->fetch();
+                                $oldtitle = $old->title;
+                                $olddescription = $old->description;
+                                $oldmeta_title = $old->meta_title;
+                                $oldmeta_description = $old->meta_description;
+                                $oldcategory_id = $old->category_id;
+                                $oldsub_category_id = $old->sub_category_id;
+                                $oldimage = $old->image;
+                                $oldseo_url = $old->seo_url;
+                                $oldtags = $old->tags;
+                                $oldauthors = $old->authors;
+                                $oldstatus = $old->status;
+                                echo $oldtitle;
+                            endif;
+                        endif;
+                    ?>
+
 					<!-- Row -->
 					<div class="row">
 						<div class="col-sm-12">
@@ -49,14 +72,14 @@
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Title</label>
-															<input type="text" id="title" name="title" class="form-control" placeholder="Enter your title">
+															<input type="text" id="title" name="title" class="form-control" placeholder="Enter your title" value="<?php echo($oldtitle); ?>">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta title</label>
-															<input type="text" id="meta_title" name="meta_title" class="form-control" placeholder="Enter your Meta title">
+															<input type="text" id="meta_title" name="meta_title" class="form-control" placeholder="Enter your Meta title" value="<?php echo($oldmeta_title); ?>">
 														</div>
 													</div>
 													<!--/span-->
@@ -66,7 +89,7 @@
 													<div class="col-md-12">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta description</label>
-															<input type="text" id="meta_description" name="meta_description" class="form-control" placeholder="Enter your Meta description">
+															<input type="text" id="meta_description" name="meta_description" class="form-control" placeholder="Enter your Meta description" value="<?php echo($oldmeta_description); ?>">
 														</div>
 													</div>
 													<!--/span-->
@@ -77,7 +100,7 @@
 												<div class="row">
 													<div class="col-md-12">
 														<div class="form-group">
-                                                            <textarea name="description" id="editor1" rows="10" cols="80"></textarea>
+                                                            <textarea name="description" id="editor1" rows="10" cols="80"><?php echo($olddescription); ?></textarea>
 														</div>
 													</div>
 												</div>
@@ -86,7 +109,7 @@
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Author</label>
-															<input type="text" id="author" name="author" class="form-control" placeholder="Enter Author">
+															<input type="text" id="author" name="author" class="form-control" placeholder="Enter Author" value="<?php echo($oldauthors); ?>">
 															<!-- <select class="form-control" data-placeholder="Choose a Category" name="category">
                                                                 <option value="" selected disabled>Please Select Author</option>
 																<option value="Admin">Admin</option>
@@ -98,7 +121,7 @@
 														<div class="form-group">
 															<label class="control-label mb-10">Category</label>
 															<select class="form-control" data-placeholder="Choose a Category" name="category">
-                                                                <option value="" selected disabled>Please Select Category</option>
+                                                                <option value="" disabled>Please Select Category</option>
 																<?php
 																$selcat = "SELECT * FROM `categories` WHERE domain='$domain'";
 																$queries->query($selcat);
@@ -107,7 +130,7 @@
 																		$id = $fetchcat->id;
                                                                     	$category = $fetchcat->category_name;
 																?>
-																<option value="<?php echo $category; ?>"><?php echo $category; ?></option>
+																<option value="<?php echo $category; ?>" <?php if($oldcategory_id == "$category") echo " selected"; ?>><?php echo $category; ?></option>
 																<?php
 																	endwhile;
 																endif;
@@ -122,14 +145,14 @@
                                                 <div class="col-md-6 mt-10">
 														<div class="form-group">
 															<label class="control-label mb-10" required>Tags <span class="text-danger">[Please Add (,) comma sign between tags]</span></label>
-															<input name="tags" type="text" name="tags" class="form-control">
+															<input name="tags" type="text" name="tags" class="form-control" value="<?php echo($oldtags); ?>">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6 mt-10">
 														<div class="form-group">
 															<label class="control-label mb-10" required>Seo Url</label>
-															<input name="seo_url" type="text" class="form-control">
+															<input name="seo_url" type="text" class="form-control" value="<?php echo($oldseo_url); ?>">
 														</div>
 													</div>
 													<!--/span-->
@@ -142,7 +165,7 @@
 														<!-- <div class="img-upload-wrap">
 															<img class="img-responsive" src="../img/chair.jpg" alt="upload_img"> 
 														</div> -->
-														<input type="file" class="upload" name="featured">
+														<input type="file" class="upload" name="featured" value="<?php echo($oldimage); ?>">
 														<!-- <div class="fileupload btn btn-info btn-anim"><i class="fa fa-upload"></i><span class="btn-text">Upload new image</span>
 															<input type="file" class="upload" name="featured">
 														</div> -->
@@ -153,13 +176,13 @@
 																<div class="radio-list">
 																	<div class="radio-inline pl-0">
 																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio1" value="publish">
+																			<input type="radio" name="radio" id="radio1" value="publish" <?php if($oldstatus == "publish") echo " checked"; ?>>
 																			<label for="radio1">Published</label>
 																		</div>
 																	</div>
 																	<div class="radio-inline">
 																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio2" value="darft">
+																			<input type="radio" name="radio" id="radio2" value="darft" <?php if($oldstatus == "darft") echo " checked"; ?>>
 																			<label for="radio2">Draft</label>
 																		</div>
 																	</div>

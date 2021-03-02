@@ -161,8 +161,11 @@
 				</li>
 				<li><hr class="light-grey-hr mb-10"/></li>
 				<li class="navigation-header">
-					<span>component</span> 
+					<span>Information</span> 
 					<i class="zmdi zmdi-more"></i>
+				</li>
+				<li>
+					<a href="all-posts"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Posts</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
 				</li>
 				<li>
 					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ui_dr"><div class="pull-left"><i class="zmdi zmdi-smartphone-setup mr-20"></i><span class="right-nav-text">UI Elements</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
