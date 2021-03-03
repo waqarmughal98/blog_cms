@@ -256,10 +256,9 @@
                             $imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
                             move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $imageName1);
 
-							$insertBlog = "INSERT INTO posts (`title`, `description`, `meta_title`, `meta_description`, `category_id`, `sub_category_id`, `image`, `seo_url`, `date`, `domain`, `tags`,`authors`,`status`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-							$paramBlog = [$title,$description,$meta_title,$meta_description,$category,NULL,$imageName1,$url,$date,$domain,$tags,$author,$status];
-							if($queries->query($insertBlog,$paramBlog)):
-								echo '<script>alert("Post Added!");</script>';
+							$insertBlog = "UPDATE posts SET `title`='$title' , `description`='$description', `meta_title`='$meta_title', `meta_description`='$meta_description', `category_id`='$category', `sub_category_id`=NULL, `image`='$imageName1' , `seo_url`='$url', `date`='$date', `tags`='$tags',`authors`='$author',`status`='$status' WHERE `domain`='$domain' AND `id`='$gid'";
+							if($queries->query($insertBlog)):
+								echo '<script>alert("Post Updated!");</script>';
 							endif;
 							echo("<script> window.open('all-posts.php','_self'); </script>");
 						endif;

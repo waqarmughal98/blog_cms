@@ -227,6 +227,18 @@
 							//$target_file = $target_dir . basename($_FILES["featured"]["name"]);
 							//$imageFileType = rand().'.'.pathinfo($target_file,PATHINFO_EXTENSION);
 							//move_uploaded_file($_FILES["featured"]["tmp_name"], $target_file);
+
+							if(isset($_FILES["featured"]["name"])){
+							$product_picture = $_FILES["featured"]["name"];
+							$sql = "UPDATE posts SET product_name='$product_name', product_price='$product_price', product_picture='$product_picture' WHERE id='$product_id'";
+							$target_dir = "uploads/";
+							    $target_file = $target_dir . basename($_FILES["featured"]["name"]);
+							   $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+							move_uploaded_file($_FILES["featured"]["tmp_name"],$target_file);
+							}else{
+							 $sql = "Update table_product Set product_name='$product_name', product_price='$product_price' Where product_id='$product_id'"
+							}
+							$queries->query($sql);
 							
 							$uploaddir = "uploads/";
                             $imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);

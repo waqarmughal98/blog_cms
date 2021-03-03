@@ -35,7 +35,7 @@
 	</div>
 	<div class="blog_main_header">
 		<div class="blog_logo">
-			<a href="index.html"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
+			<a href="index"><img src="images/logo1.png" class="img-fluid" alt="logo"></a>
 			<div class="blog_menu_toggle">
 				<span>
 					<i class="fa fa-bars" aria-hidden="true"></i>
