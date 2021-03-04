@@ -43,10 +43,30 @@
 								<div class="panel-wrapper collapse in">
 									<div class="panel-body">
 										<div class="">
-											<form action="" method="POST" enctype="multipart/form-data">
-											    <input class="btn btn-default" style="float: left;" name="images[]" type="file" multiple />
-												<button class="btn btn-success ml-20" type="submit" name="upload">Submit</button>
-											</form>
+											<?php
+                                                $selectImages = "SELECT * FROM `media` WHERE domain='$domain'";
+                                                $queries->query($selectImages);
+                                                if($queries->count() > 0):
+                                                    while($fetchImages = $queries->fetch()):
+                                                        $id = $fetchImages->id;
+                                                        $images = $fetchImages->image_name;
+                                            ?>
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12  file-box">
+												<div class="file">
+													<a class="copy_text" href="uploads/<?php echo $images;?>">
+														
+														<div class="image" style="background-image:url(uploads/<?php echo $images;?>)">
+														</div>
+														<div class="file-name">
+                                                            <?php echo $images;?>
+														</div>
+													</a>
+												</div>
+											</div>
+                                            <?php
+                                                    endwhile;
+                                                endif;
+                                            ?>
 										</div>
 									</div>
 								</div>
@@ -54,6 +74,23 @@
 						</div>
 					</div>
 					<!-- /Row -->
+                    
+                    <script>
+                        $('.copy_text').click(function (e) {
+                       e.preventDefault();
+                       var copyText = $(this).attr('href');
+                    
+                       document.addEventListener('copy', function(e) {
+                          e.clipboardData.setData('text/plain', copyText);
+                          e.preventDefault();
+                       }, true);
+                    
+                       document.execCommand('copy');  
+                       console.log('copied text : ', copyText);
+                       alert('copied text: ' + copyText); 
+                     });
+                    </script>
+
 					<?php
 						if(isset($_POST['upload'])):
 
@@ -91,40 +128,6 @@
 							echo("<script> alert('Media Uploaded!!'); </script>");
 							echo "<script>window.open('all-media.php','_self'); </script>";
 
-							//$countfiles = count($_FILES['images']['name']);.
-							
-							//// Upload directory
-							//$upload_location = "uploads/";
-							//// To store uploaded files path
-							//$files_arr = array();
-							
-							//// Loop all files
-							//for($index = 0;$index < $countfiles;$index++){
-							//
-							//   if(isset($_FILES['images']['name'][$index]) && $_FILES['images']['name'][$index] != ''){
-							//      // File name
-							//      $filename = $_FILES['images']['name'][$index];
-							//
-							//      // Get extension
-							//      $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-							//
-							//      // Valid image extension
-							//      $valid_ext = array("png","jpeg","jpg");
-							//
-							//      // Check extension
-							//      if(in_array($ext, $valid_ext)){
-							//	
-							//         // File path
-							//         $path = $upload_location.$filename;
-							//	
-							//         // Upload file
-							//         if(move_uploaded_file($_FILES['images']['tmp_name'][$index],$path)){
-							//            $files_arr[] = $path;
-							//         }
-							//      }
-							//   }
-							//}
-
 						endif;
 					?>
 				</div>
@@ -148,17 +151,3 @@
 <?php
 	require_once('assets/attach/footer.php');
 ?>
-
-<!-- <script>
-Dropzone.autoDiscover = false;
-$(function(){
-    // Dropzone Multiple Image
-    var myDropzoneMultiple = new Dropzone("#dropzoneFrom", {
-        url: 'upload.php',
-        paramName: 'file',
-        maxFilesize: 2,
-        maxFiles: 10,
-        acceptedFiles: '.jpg, .jpeg, .png, .svg'
-    });
-});
-</script> -->
