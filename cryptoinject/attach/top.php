@@ -1,3 +1,20 @@
+<?php
+// Connection File
+require_once("../admin/assets/config/config.php");
+require_once("../admin/assets/config/queries.php");
+// require_once("assets/config/validation.php");
+// require_once("assets/config/sendemail.php");
+session_start();
+ob_start();
+$queries = new Queries;
+//Domain
+$domain = "cryptoinject.com";
+// Show Errors
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+error_reporting(E_ALL);
+?>
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->

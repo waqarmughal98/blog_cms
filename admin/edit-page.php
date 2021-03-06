@@ -34,6 +34,23 @@
 						<!-- /Breadcrumb -->
 					</div>
 					<!-- /Title -->
+
+                    <?php
+                        if(isset($_GET['id'])):
+                            $pageId = $_GET['id'];
+
+                            $getPage = "SELECT * FROM pages WHERE id='$pageId' AND domain='$domain'";
+                            $queries->query($getPage);
+                            if($queries->count() > 0):
+                                while($row = $queries->fetch()):
+                                    $title = $row->page_title;
+                                    $meta_title = $row->meta_title;
+                                    $meta_description = $row->meta_description;
+                                    $description = $row->body;
+                                    $tags = $row->tags;
+                                    $status = $row->status;
+                                    $seo_url = $row->seo_url;
+                    ?>
 					
 					<!-- Row -->
 					<div class="row">
@@ -49,14 +66,14 @@
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Page Name</label>
-															<input type="text" id="title" name="page_name" class="form-control" placeholder="Enter your title">
+															<input type="text" id="title" name="page_name" class="form-control" placeholder="Enter your title" value="<?php echo $title; ?>">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta title</label>
-															<input type="text" id="meta_title" name="meta_title" class="form-control" placeholder="Enter your Meta title">
+															<input type="text" id="meta_title" name="meta_title" class="form-control" placeholder="Enter your Meta title" value="<?php echo $meta_title; ?>">
 														</div>
 													</div>
 													<!--/span-->
@@ -66,7 +83,7 @@
 													<div class="col-md-12">
 														<div class="form-group">
 															<label class="control-label mb-10">Meta description</label>
-															<input type="text" id="meta_description" name="meta_description" class="form-control" placeholder="Enter your Meta description">
+															<input type="text" id="meta_description" name="meta_description" class="form-control" placeholder="Enter your Meta description" value="<?php echo $meta_description; ?>">
 														</div>
 													</div>
 													<!--/span-->
@@ -77,7 +94,7 @@
 												<div class="row">
 													<div class="col-md-12">
 														<div class="form-group">
-                                                            <textarea name="body" id="editor1" rows="10" cols="80"></textarea>
+                                                            <textarea name="body" id="editor1" rows="10" cols="80"><?php echo $description; ?></textarea>
 														</div>
 													</div>
 												</div>
@@ -87,14 +104,14 @@
                                                 <div class="col-md-6 mt-10">
 														<div class="form-group">
 															<label class="control-label mb-10" required>Tags <span class="text-danger">[Please Add (,) comma sign between tags]</span></label>
-															<input name="tags" type="text" name="tags" class="form-control">
+															<input name="tags" type="text" name="tags" class="form-control" value="<?php echo $tags; ?>">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6 mt-10">
 														<div class="form-group">
 															<label class="control-label mb-10" required>Seo Url</label>
-															<input name="seo_url" type="text" class="form-control">
+															<input name="seo_url" type="text" class="form-control" value="<?php echo $seo_url; ?>">
 														</div>
 													</div>
 													<!--/span-->
@@ -107,13 +124,13 @@
 															<div class="radio-list">
 																<div class="radio-inline pl-0">
 																	<div class="radio radio-info">
-																		<input type="radio" name="radio" id="radio1" value="publish">
+																		<input type="radio" name="radio" id="radio1" value="publish" <?php if($status == "publish") echo " checked"; ?>>
 																		<label for="radio1">Published</label>
 																	</div>
 																</div>
 																<div class="radio-inline">
 																	<div class="radio radio-info">
-																		<input type="radio" name="radio" id="radio2" value="darft">
+																		<input type="radio" name="radio" id="radio2" value="darft" <?php if($status !== "publish") echo " checked"; ?>>
 																		<label for="radio2">Draft</label>
 																	</div>
 																</div>
@@ -136,6 +153,9 @@
 					<!-- /Row -->
                     
                     <?php
+                                endwhile;
+                            endif;
+                        endif;
 						if(isset($_POST['publish'])):
 							$page_name = htmlentities($_POST['page_name']);
 							$meta_title = htmlentities($_POST['meta_title']);
@@ -162,7 +182,7 @@
                             $url = seoUrl($seoUrl);
 							
 							// Validate Seo Url
-                            $checkUrl = "SELECT * FROM pages WHERE seo_url='$url'";
+                            $checkUrl = "SELECT * FROM pages WHERE seo_url='$url' AND id!='$pageId'";
                             $queries->query($checkUrl);
                             if($queries->count() > 0):
                                 echo("<script> alert('Url is alredy exist, Please try another Url'); </script>");
@@ -171,12 +191,11 @@
 							//date
 							$date = date("l-d-m-y");
 
-							$insertBlog = "INSERT INTO pages (`page_title`, `meta_title`, `meta_description`, `body`, `tags`, `status`, `seo_url`, `domain`, `date`) VALUES (?,?,?,?,?,?,?,?,?)";
-							$paramBlog = [$page_name,$meta_title,$meta_description,$body,$tags,$status,$url,$domain,$date];
-							if($queries->query($insertBlog,$paramBlog)):
-								echo '<script>alert("Page Added!");</script>';
+							$insertBlog = "UPDATE pages SET `page_title`='$page_name', `meta_title`='$meta_title', `meta_description`='$meta_description', `body`='$body', `tags`='$tags', `status`='$status', `seo_url`='$url', `domain`='$domain', `date`='$date'";
+							if($queries->query($insertBlog)):
+								echo '<script>alert("Page Updated!");</script>';
 							endif;
-							echo("<script> window.open('add-new-page.php','_self'); </script>");
+							echo("<script> window.open('all-pages.php','_self'); </script>");
 						endif;
 					?>
 
@@ -188,7 +207,6 @@
 <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script src="https://cdn.ckeditor.com/4.13.1/full/ckeditor.js"></script>
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script> -->
 <script>
     CKEDITOR.replace( 'editor1' );
     CKEDITOR.replace( 'editor2' );
@@ -200,7 +218,6 @@
         removePlugins: 'sourcearea',
         removePlugins: 'htmlwriter'
     });
-	
 </script>
 <!-- Footer -->
 <?php

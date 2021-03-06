@@ -53,7 +53,6 @@
                                 $oldtags = $old->tags;
                                 $oldauthors = $old->authors;
                                 $oldstatus = $old->status;
-                                echo $oldtitle;
                             endif;
                         endif;
                     ?>

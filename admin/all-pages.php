@@ -93,7 +93,7 @@
                                                             endif;
                                                             if(isset($_POST['edit'])):
                                                                 $editval = $_POST['edit'];
-                                                                echo "<script>window.location.href='edit-post.php?id=$editval'</script>";
+                                                                echo "<script>window.location.href='edit-page.php?id=$editval'</script>";
                                                             endif;
                                                         ?>
 			        								</tbody>

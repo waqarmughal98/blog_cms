@@ -51,11 +51,11 @@
                                                         $id = $fetchImages->id;
                                                         $images = $fetchImages->image_name;
                                             ?>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12  file-box">
+                                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12  file-box">
 												<div class="file">
 													<a class="copy_text" href="uploads/<?php echo $images;?>">
 														
-														<div class="image" style="background-image:url(uploads/<?php echo $images;?>)">
+														<div class="image" style="background-image:url(uploads/<?php echo $images;?>); background-size: contain; background-repeat: no-repeat; background-position: center;">
 														</div>
 														<div class="file-name">
                                                             <?php echo $images;?>

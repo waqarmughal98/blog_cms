@@ -52,13 +52,26 @@
 								<li><a href="index3.html">Home Page3</a></li>
 						</ul>
 					</li>
-					<li><a href="politics.html">Politics <span>new</span></a></li>
+					<?php
+                    $selectcat = "SELECT * FROM `categories` WHERE domain='$domain' AND pid=0";
+                    $queries->query($selectcat);
+                    if($queries->count() > 0):
+                        while($fetchcat = $queries->fetch()):
+                            $id = $fetchcat->id;
+                            $category = $fetchcat->category_name;
+                    ?>
+					<li><a href="politics.html"><?php echo $category; ?> <span>new</span></a></li>
+					<?php
+                        endwhile;
+                    endif;
+					?>
+					<!-- <li><a href="politics.html">Politics <span>new</span></a></li>
 					<li><a href="world.html">World</a></li>
 					<li><a href="technology.html">Tech</a></li>
 					<li><a href="sport.html">Sports <span>new</span></a></li>
 					<li><a href="lifestyle.html">lifestyle</a></li>
 					<li><a href="travel.html">Travel</a></li>
-					<li><a href="fashion.html">Fashion <span>new</span></a></li>
+					<li><a href="fashion.html">Fashion <span>new</span></a></li> -->
 					<li><a href="#">pages</a>
 						<ul class="sub-menu">
 							<li><a href="blog_single_fullwidth.html">Blog Single FullWidth</a></li>

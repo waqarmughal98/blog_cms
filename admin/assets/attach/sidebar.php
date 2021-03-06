@@ -63,6 +63,9 @@
 					<a href="/admin/add-post"><div class="pull-left"><i class="fa fa-pencil-square-o mr-20"></i><span class="right-nav-text">Add Post</span></div><div class="clearfix"></div></a>
 				</li>
 				<li>
+					<a href="/admin/add-new-page"><div class="pull-left"><i class="fa fa-pencil-square-o mr-20"></i><span class="right-nav-text">Add Pages</span></div><div class="clearfix"></div></a>
+				</li>
+				<!-- <li>
 					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">E-Commerce</span></div><div class="pull-right"><span class="label label-success">hot</span></div><div class="clearfix"></div></a>
 					<ul id="ecom_dr" class="collapse collapse-level-1">
 						<li>
@@ -87,7 +90,7 @@
 							<a href="product-checkout.html">Checkout</a>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 				<li><hr class="light-grey-hr mb-10"/></li>
 				<li class="navigation-header">
 					<span>Information</span> 
@@ -96,14 +99,20 @@
 				<li>
 					<a href="all-posts"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Posts</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
 				</li>
-				<li><hr class="light-grey-hr mb-10"/></li>
+				<li>
+					<a href="all-pages"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Pages</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+				</li>
+				<li>
+					<a href="all-media"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Media</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+				</li>
+				<!-- <li><hr class="light-grey-hr mb-10"/></li>
 				<li class="navigation-header">
 					<span>featured</span> 
 					<i class="zmdi zmdi-more"></i>
 				</li>
 				<li>
 					<a href="documentation.html"><div class="pull-left"><i class="zmdi zmdi-book mr-20"></i><span class="right-nav-text">documentation</span></div><div class="clearfix"></div></a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<!-- /Left Sidebar Menu -->
