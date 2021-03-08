@@ -19,7 +19,7 @@ $(document).ready(function(){
 $(window).on("load",function(){
 	window.setTimeout(function(){
 		$.toast({
-			heading: 'Welcome to droopy',
+			heading: 'Welcome to CryptoInject',
 			text: 'Use the predefined ones, or specify a custom position object.',
 			position: 'bottom-left',
 			loaderBg:'#f8b32d',

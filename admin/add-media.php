@@ -2,8 +2,8 @@
 	require_once('assets/attach/top.php');
 ?>
 
-	<!-- Bootstrap Dropzone CSS -->
-	<link href="../vendors/bower_components/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/basic.min.css" integrity="sha512-MeagJSJBgWB9n+Sggsr/vKMRFJWs+OUphiDV7TJiYu+TNQD9RtVJaPDYP8hA/PAjwRnkdvU+NsTncYTKlltgiw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/dropzone.min.css" integrity="sha512-jU/7UFiaW5UBGODEopEqnbIAHOI8fO6T99m7Tsmqs2gkdujByJfkCbbfPSN4Wlqlb9TGnsuC0YgUgWkRBK7B9A==" crossorigin="anonymous" />
 
 	</head>
 	<body>
@@ -17,7 +17,7 @@
 					<!-- Title -->
 					<div class="row heading-bg">
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-						  <h5 class="txt-dark">Media</h5>
+						  <h5 class="txt-dark">Add Media</h5>
 						</div>
 						<!-- Breadcrumb -->
 						<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
@@ -42,89 +42,24 @@
 								</div>
 								<div class="panel-wrapper collapse in">
 									<div class="panel-body">
-										<div class="">
-											<form action="" method="POST" enctype="multipart/form-data">
-											    <input class="btn btn-default" style="float: left;" name="images[]" type="file" multiple />
-												<button class="btn btn-success ml-20" type="submit" name="upload">Submit</button>
-											</form>
-										</div>
+											<form action="/admin/sb-file-upload" class="dropzone" id="my-awesome-dropzone"></form>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- /Row -->
-					<?php
-						if(isset($_POST['upload'])):
-
-							// Run Queries
-                            $queries = new Queries;
-                            // Get Data
-                            extract($_POST);
-                            $error=array();
-                            $extension=array("jpeg","jpg","png","gif");
-                            foreach($_FILES["images"]["tmp_name"] as $key=>$tmp_name){
-                                $file_name=$_FILES["images"]["name"][$key];
-                                $file_tmp=$_FILES["images"]["tmp_name"][$key];
-                                $ext=pathinfo($file_name,PATHINFO_EXTENSION);
-                                $uploaddir = "uploads/";
-                                if(in_array($ext,$extension)){
-                                    if(!file_exists($uploaddir.$file_name)){
-                                        move_uploaded_file($file_tmp=$_FILES["images"]["tmp_name"][$key],$uploaddir.$file_name);
-                                        $insertQuery = "INSERT INTO media (`image_name`, `domain`) VALUES (?,?)";
-                                        $insertValue = [$file_name,$domain];
-                                        $queries->query($insertQuery,$insertValue);
-                                    }
-                                    else {
-                                        $filename=basename($file_name,$ext);
-                                        $newFileName=$filename.time().".".$ext;
-                                        move_uploaded_file($file_tmp=$_FILES["images"]["tmp_name"][$key],$uploaddir.$newFileName);
-                                        $insertQuery = "INSERT INTO media (`image_name`, `domain`) VALUES (?,?)";
-                                        $insertValue = [$file_name,$domain];
-                                        $queries->query($insertQuery,$insertValue);
-                                    }
-                                }
-                                else{
-                                    array_push($error,"$file_name,");
-                                }
-                            }
-							echo("<script> alert('Media Uploaded!!'); </script>");
-							echo "<script>window.open('all-media.php','_self'); </script>";
-
-						endif;
-					?>
 				</div>
 				
 <!-- Footer -->
-<!-- jQuery -->
-<script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.6/dropzone.js" integrity="sha512-/diY7kiMCU8WBbgrhBMJjMDtrsJGPP2LQG4gaw9tHRYlQ50sJLhAQZH/MSpEPdQHcY0YXYfsosyjMArCDTa3SA==" crossorigin="anonymous"></script>
 
-<!-- Dropzone JavaScript -->
-<script src="../vendors/bower_components/dropzone/dist/dropzone.js"></script>
-
-<!-- Dropzone Init JavaScript -->
-<script src="dist/js/dropzone-data.js"></script>
-
-<!-- Fancy Dropdown JS -->
-<script src="dist/js/dropdown-bootstrap-extended.js"></script>
+<script>
+    $("#myId").dropzone({ url: "/admin/sb-file-upload" });
+</script>
 
 <?php
 	require_once('assets/attach/footer.php');
 ?>
-
-<!-- <script>
-Dropzone.autoDiscover = false;
-$(function(){
-    // Dropzone Multiple Image
-    var myDropzoneMultiple = new Dropzone("#dropzoneFrom", {
-        url: 'upload.php',
-        paramName: 'file',
-        maxFilesize: 2,
-        maxFiles: 10,
-        acceptedFiles: '.jpg, .jpeg, .png, .svg'
-    });
-});
-</script> -->

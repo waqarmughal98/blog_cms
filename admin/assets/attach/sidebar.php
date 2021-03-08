@@ -48,7 +48,7 @@
 					<i class="zmdi zmdi-more"></i>
 				</li>
 				<li>
-					<a class="active" href="/admin" data-toggle="collapse"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="clearfix"></div></a>
+					<a class="active" href="/admin/index" data-toggle="collapse"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="clearfix"></div></a>
 				</li>
 				<li>
 					<a href="/admin/add-category"><div class="pull-left"><i class="fa fa-list-alt mr-20"></i><span class="right-nav-text">Add Category</span></div><div class="clearfix"></div></a>

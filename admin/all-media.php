@@ -4,7 +4,18 @@
 
 	<!-- Bootstrap Dropzone CSS -->
 	<link href="../vendors/bower_components/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/>
-
+<style>
+	.ico {
+	    position: absolute;
+	    right: 20px;
+	    bottom: 5px;
+	    color: red;
+	    font-size: 20px;
+	    background: none;
+	    border: none;
+		cursor: pointer;
+	}
+</style>
 	</head>
 	<body>
 <?php
@@ -51,21 +62,30 @@
                                                         $id = $fetchImages->id;
                                                         $images = $fetchImages->image_name;
                                             ?>
-                                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12  file-box">
-												<div class="file">
-													<a class="copy_text" href="uploads/<?php echo $images;?>">
-														
-														<div class="image" style="background-image:url(uploads/<?php echo $images;?>); background-size: contain; background-repeat: no-repeat; background-position: center;">
-														</div>
-														<div class="file-name">
-                                                            <?php echo $images;?>
-														</div>
-													</a>
+                                            	<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12  file-box">
+													<div class="file">
+														<a class="copy_text" href="uploads/<?php echo $images;?>" target="_blank">
+															<div class="image" style="background-image:url(uploads/<?php echo $images;?>); background-size: contain; background-repeat: no-repeat; background-position: center;">
+															</div>
+															<div class="file-name">
+                                            	                <?php echo $images;?>
+															</div>
+														</a>
+													</div>
+													<form action="" method="POST">
+														<button class="ico" name="del" value="<?php echo $id;?>"><i class="fa fa-close"></i></button>
+													</form>
 												</div>
-											</div>
                                             <?php
                                                     endwhile;
                                                 endif;
+												if(isset($_POST['del'])):
+													$id=$_POST['del'];
+													$delquery = "DELETE FROM `media` WHERE id='$id'";
+													$queries->query($delquery);
+													echo '<script>alert("Media Deleted!!")</script>';
+													echo '<script>window.location.href="all-media.php";</script>';
+												endif;
                                             ?>
 										</div>
 									</div>
@@ -76,60 +96,20 @@
 					<!-- /Row -->
                     
                     <script>
-                        $('.copy_text').click(function (e) {
-                       e.preventDefault();
-                       var copyText = $(this).attr('href');
+                    //     $('.copy_text').click(function (e) {
+                    //    e.preventDefault();
+                    //    var copyText = $(this).attr('href');
                     
-                       document.addEventListener('copy', function(e) {
-                          e.clipboardData.setData('text/plain', copyText);
-                          e.preventDefault();
-                       }, true);
+                    //    document.addEventListener('copy', function(e) {
+                    //       e.clipboardData.setData('text/plain', copyText);
+                    //       e.preventDefault();
+                    //    }, true);
                     
-                       document.execCommand('copy');  
-                       console.log('copied text : ', copyText);
-                       alert('copied text: ' + copyText); 
-                     });
+                    //    document.execCommand('copy');  
+                    //    console.log('copied text : ', copyText);
+                    //    alert('copied text: ' + copyText); 
+                    //  });
                     </script>
-
-					<?php
-						if(isset($_POST['upload'])):
-
-							// Run Queries
-                            $queries = new Queries;
-                            // Get Data
-                            extract($_POST);
-                            $error=array();
-                            $extension=array("jpeg","jpg","png","gif");
-                            foreach($_FILES["images"]["tmp_name"] as $key=>$tmp_name){
-                                $file_name=$_FILES["images"]["name"][$key];
-                                $file_tmp=$_FILES["images"]["tmp_name"][$key];
-                                $ext=pathinfo($file_name,PATHINFO_EXTENSION);
-                                $uploaddir = "uploads/";
-                                if(in_array($ext,$extension)){
-                                    if(!file_exists($uploaddir.$file_name)){
-                                        move_uploaded_file($file_tmp=$_FILES["images"]["tmp_name"][$key],$uploaddir.$file_name);
-                                        $insertQuery = "INSERT INTO media (`image_name`, `domain`) VALUES (?,?)";
-                                        $insertValue = [$file_name,$domain];
-                                        $queries->query($insertQuery,$insertValue);
-                                    }
-                                    else {
-                                        $filename=basename($file_name,$ext);
-                                        $newFileName=$filename.time().".".$ext;
-                                        move_uploaded_file($file_tmp=$_FILES["images"]["tmp_name"][$key],$uploaddir.$newFileName);
-                                        $insertQuery = "INSERT INTO media (`image_name`, `domain`) VALUES (?,?)";
-                                        $insertValue = [$file_name,$domain];
-                                        $queries->query($insertQuery,$insertValue);
-                                    }
-                                }
-                                else{
-                                    array_push($error,"$file_name,");
-                                }
-                            }
-							echo("<script> alert('Media Uploaded!!'); </script>");
-							echo "<script>window.open('all-media.php','_self'); </script>";
-
-						endif;
-					?>
 				</div>
 				
 <!-- Footer -->
