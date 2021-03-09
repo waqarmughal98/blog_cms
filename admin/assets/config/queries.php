@@ -20,5 +20,9 @@ class Queries extends db{
     public function fetch(){
         return $this->result->fetch(PDO::FETCH_OBJ);
     }
+    // Fetch All Rows
+    public function fetchAll(){
+        return $this->result->fetchAll(PDO::FETCH_OBJ);
+    }
 }
 ?>

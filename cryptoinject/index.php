@@ -346,7 +346,7 @@
 					<div class="blog_world_news worldnews_tab blog_topheading_slider_nav">
 						<div class="blog_main_heading_div wow fadeInUp"> 
 							<div class="blog_heading_div">
-								<h3 class="blog_bg_orange">World News</h3>
+								<h3 class="blog_bg_orange">Entertainment</h3>
 							</div>
 							<nav class="blog_tab_nav blog_color_orange">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">

@@ -53,26 +53,58 @@
 		<div class="blog_main_menu">
 			<div class="blog_main_menu_innerdiv">
 				<ul>
-					<li class="active"><a href="#">Home</a>
-						<ul class="sub-menu">
-							<li><a href="index.html">Home Page1</a></li>
-								<li><a href="index2.html">Home Page2</a></li>
-								<li><a href="index3.html">Home Page3</a></li>
-						</ul>
-					</li>
+					<li class="active"><a href="#">Home</a></li>
 					<?php
-                    $selectcat = "SELECT * FROM `categories` WHERE domain='$domain' AND pid=0";
+                    $selectcat = "SELECT * FROM `categories` WHERE domain='$domain' AND `pid`=0";
                     $queries->query($selectcat);
+
+					// $fetchcat = $queries->fetchAll();
+
+					// echo "<pre>";
+					// print_r($fetchcat);
+
                     if($queries->count() > 0):
-                        while($fetchcat = $queries->fetch()):
-                            $id = $fetchcat->id;
-                            $category = $fetchcat->category_name;
+
+						$fetchcat = $queries->fetchAll();
+
+						// echo count($fetchcat);
+						// $i = 0;
+
+						// print_r($fetchcat);
+
+						foreach($fetchcat as $mainCategory):
+
+							// print_r($mainCategory);
+
+                            $mainId = $mainCategory->id;
+							$mainSeoUrl = $mainCategory->seo_url;
+                            $mainCategory = $mainCategory->category_name;
+
+							echo("<li><a href='category?page=$mainSeoUrl'>$mainCategory<span>new</span></a>");
+
+							$selectcat = "SELECT * FROM `categories` WHERE domain='$domain' AND `pid`=$mainId";
+							$queries->query($selectcat);
+							if($queries->count() > 0):
+								$fetchSubCate = $queries->fetchAll();
+								// print_r($fetchSubCate);
+								echo('<ul class="sub-menu">');
+								foreach($fetchSubCate as $key => $subCategory):
+									$subID       = $subCategory->id;
+									$subUrl      = $subCategory->seo_url;
+									$subCategory = $subCategory->category_name;
+									echo("<li><a href='category?page=$subUrl'>$subCategory</a></li>");
+								endforeach;
+								echo('</ul>');
+								echo('</li>');
+							else:
+								echo('</li>');
+							endif;
+
+
+						endforeach;
+					endif;
                     ?>
-					<li><a href="politics.html"><?php echo $category; ?> <span>new</span></a></li>
-					<?php
-                        endwhile;
-                    endif;
-					?>
+					</li>
 					<!-- <li><a href="politics.html">Politics <span>new</span></a></li>
 					<li><a href="world.html">World</a></li>
 					<li><a href="technology.html">Tech</a></li>
