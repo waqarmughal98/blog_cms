@@ -549,6 +549,7 @@ button:focus {
 }
 .blog_banner_slider .swiper-container.gallery-top .blog_post_slider_wrapper .blog_post_slider_img img {
     height: 775px;
+    width: 100%;
 }
 .blog_banner_slider .swiper-container.gallery-thumbs .swiper-slide {
     height: 245px;

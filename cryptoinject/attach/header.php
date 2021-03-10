@@ -58,23 +58,11 @@
                     $selectcat = "SELECT * FROM `categories` WHERE domain='$domain' AND `pid`=0";
                     $queries->query($selectcat);
 
-					// $fetchcat = $queries->fetchAll();
-
-					// echo "<pre>";
-					// print_r($fetchcat);
-
                     if($queries->count() > 0):
 
 						$fetchcat = $queries->fetchAll();
 
-						// echo count($fetchcat);
-						// $i = 0;
-
-						// print_r($fetchcat);
-
 						foreach($fetchcat as $mainCategory):
-
-							// print_r($mainCategory);
 
                             $mainId = $mainCategory->id;
 							$mainSeoUrl = $mainCategory->seo_url;
@@ -86,7 +74,6 @@
 							$queries->query($selectcat);
 							if($queries->count() > 0):
 								$fetchSubCate = $queries->fetchAll();
-								// print_r($fetchSubCate);
 								echo('<ul class="sub-menu">');
 								foreach($fetchSubCate as $key => $subCategory):
 									$subID       = $subCategory->id;

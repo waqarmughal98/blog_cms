@@ -216,7 +216,7 @@
                                 exit();
                             endif;
 							//date
-							$date = date("l-d-m-y");
+							$date = date("d-F-Y");
 
 							// Featured Image							
                             //$target_dir = "uploads/";
