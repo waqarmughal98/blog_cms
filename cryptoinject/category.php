@@ -387,7 +387,7 @@
 									if (strlen($description) > 50){
    										$description = substr($description, 0, 50) . '...';
 									}
-									$seo_url = "post?id=".$seo_url;
+									$seo_url = "post?id=".$id;
 							?>
 								<div class="blog_food_bigdiv wow fadeInUp">
 									<div class="blog_post_style2">
@@ -436,7 +436,7 @@
 									if (strlen($description) > 50){
    										$description = substr($description, 0, 50) . '...';
 									}
-									$seo_url = "post?id=".$seo_url;
+									$seo_url = "post?id=".$id;
 							?>
 							<div class="blog_post_style2 wow fadeInUp">
 								<div class="blog_post_style2_img">

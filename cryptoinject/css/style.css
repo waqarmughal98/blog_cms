@@ -1032,6 +1032,7 @@ ul.blog_meta_tags li span.blog_bg_pink:after {
     flex: 130px;
     overflow: hidden;
     position: relative;
+    height: 100%;
 }
 .blog_post_style2 .blog_post_style2_img img{
     -webkit-transition: -webkit-transform 0.5s; 
@@ -1538,6 +1539,8 @@ ul.blog_meta_tags li span.blog_bg_pink:after {
 }
 .widget_recent_post ul li .blog_recent_post .blog_recent_post_img img {
     border-radius: 100%;
+    height: 50px;
+    width: auto;
 }
 .widget_recent_post ul li .blog_recent_post .blog_recent_post_content {
     flex: calc(100% - 50px);
