@@ -51,7 +51,7 @@
 				<div class="col-lg-9 col-md-12 col-sm-12 col-12">
 					<div class="blog_post_style2 blog_single_div">
 						<div class="blog_post_style2_img wow fadeInUp">
-							<img src="<?php echo $image; ?>" class="img-fluid" alt="">
+							<img src="<?php echo $image; ?>" class="img-fluid" style="width: 100%;" alt="">
 						</div>
 						<div class="blog_post_style2_content wow fadeInUp">
 							<h3><?php echo $title; ?></h3>
