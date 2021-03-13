@@ -161,13 +161,12 @@
 												<hr class="light-grey-hr"/>
 												<div class="row">
 													<div class="col-lg-12">
-														<!-- <div class="img-upload-wrap">
-															<img class="img-responsive" src="../img/chair.jpg" alt="upload_img"> 
-														</div> -->
+														<div class="img-upload-wrap">
+															<img class="img-responsive" src="/admin/uploads/<?php echo($oldimage); ?>" alt="upload_img"> 
+														</div>
 														<input type="hidden" name="old-featured" value="<?php echo($oldimage); ?>">
 														<input type="file" class="upload" name="featured">
 														<p style="margin-top: 10px">Previous Image:</p>
-														<img src="/admin/uploads/<?php echo($oldimage); ?>" style="width: 180px; margin-top: 10px">
 														<!-- <div class="fileupload btn btn-info btn-anim"><i class="fa fa-upload"></i><span class="btn-text">Upload new image</span>
 															<input type="file" class="upload" name="featured">
 														</div> -->
