@@ -251,9 +251,13 @@
 							//$imageFileType = rand().'.'.pathinfo($target_file,PATHINFO_EXTENSION);
 							//move_uploaded_file($_FILES["featured"]["tmp_name"], $target_file);
 							
+							if(empty($_FILES['featured']['name'])):
 							$uploaddir = "uploads/";
                             $imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
                             move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $imageName1);
+							else:
+								$imageName1 = $_FILES['featured']['name'];
+							endif;
 
 							$insertBlog = "UPDATE posts SET `title`='$title' , `description`='$description', `meta_title`='$meta_title', `meta_description`='$meta_description', `category_id`='$category', `sub_category_id`=NULL, `image`='$imageName1' , `seo_url`='$url', `date`='$date', `tags`='$tags',`authors`='$author',`status`='$status' WHERE `domain`='$domain' AND `id`='$gid'";
 							if($queries->query($insertBlog)):
