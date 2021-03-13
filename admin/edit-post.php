@@ -164,7 +164,10 @@
 														<!-- <div class="img-upload-wrap">
 															<img class="img-responsive" src="../img/chair.jpg" alt="upload_img"> 
 														</div> -->
-														<input type="file" class="upload" name="featured" value="<?php echo($oldimage); ?>">
+														<input type="hidden" name="old-featured" value="<?php echo($oldimage); ?>">
+														<input type="file" class="upload" name="featured">
+														<p style="margin-top: 10px">Previous Image:</p>
+														<img src="/admin/uploads/<?php echo($oldimage); ?>" style="width: 180px; margin-top: 10px">
 														<!-- <div class="fileupload btn btn-info btn-anim"><i class="fa fa-upload"></i><span class="btn-text">Upload new image</span>
 															<input type="file" class="upload" name="featured">
 														</div> -->
@@ -250,13 +253,15 @@
 							//$target_file = $target_dir . basename($_FILES["featured"]["name"]);
 							//$imageFileType = rand().'.'.pathinfo($target_file,PATHINFO_EXTENSION);
 							//move_uploaded_file($_FILES["featured"]["tmp_name"], $target_file);
+
+							// echo $_FILES['featured']['name'];
 							
-							if(empty($_FILES['featured']['name'])):
-							$uploaddir = "uploads/";
-                            $imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
-                            move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $imageName1);
+							if(!empty($_FILES['featured']['name'])):
+								$uploaddir = "uploads/";
+								$imageName1 = rand().'.'.pathinfo($_FILES['featured']['name'],PATHINFO_EXTENSION);
+								move_uploaded_file($_FILES["featured"]["tmp_name"],$uploaddir . $imageName1);
 							else:
-								$imageName1 = $_FILES['featured']['name'];
+								$imageName1 = $_POST['old-featured'];
 							endif;
 
 							$insertBlog = "UPDATE posts SET `title`='$title' , `description`='$description', `meta_title`='$meta_title', `meta_description`='$meta_description', `category_id`='$category', `sub_category_id`=NULL, `image`='$imageName1' , `seo_url`='$url', `date`='$date', `tags`='$tags',`authors`='$author',`status`='$status' WHERE `domain`='$domain' AND `id`='$gid'";
