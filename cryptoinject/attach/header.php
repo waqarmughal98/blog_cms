@@ -15,7 +15,7 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-					<crypto-widget type="ticker-quotes" template="chart4" color="blue" assets="BTC~USD,ETH~USD,LTC~USD,DASH~USD,XRP~USD,USDT~USD,ETC~USD,BTG~USD,XMR~USD" speed="100" direction="left" pause="true" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget>
+					<!-- <crypto-widget type="ticker-quotes" template="chart4" color="blue" assets="BTC~USD,ETH~USD,LTC~USD,DASH~USD,XRP~USD,USDT~USD,ETC~USD,BTG~USD,XMR~USD" speed="100" direction="left" pause="true" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget> -->
 					</div>
 				</div>
 				 <!-- Add Arrows -->
