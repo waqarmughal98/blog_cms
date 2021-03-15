@@ -37,5 +37,6 @@ error_reporting(E_ALL);
     <link rel="stylesheet" type="text/css" href="js/plugins/swiper/swiper.css">
     <link rel="stylesheet" type="text/css" href="js/plugins/magnific/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="pcw/assets/css/style.css" />
     <!-- Favicon Link -->
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">

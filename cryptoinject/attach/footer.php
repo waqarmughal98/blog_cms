@@ -152,6 +152,15 @@
 <script src="js/plugins/magnific/jquery.magnific-popup.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="pcw/assets/js/dist/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--Main js file Style-->
+<script>
+    var premiumCryptocurrencyWidgets = {
+        cryptoComareApiKey: '445cec2f0d8206b8044b33df53a505f6813266d7658fac47bbb5aa258515e885'
+    }
+</script>
+
+
 </body>
 </html>
