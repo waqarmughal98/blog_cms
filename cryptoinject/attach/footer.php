@@ -31,7 +31,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Does US Tax Overhaul Violate Global Trade.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Does US Tax Overhaul Violate Global Trade.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -42,7 +42,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -53,7 +53,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Take in your bag before going to hiking</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Take in your bag before going to hiking</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -70,7 +70,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -78,7 +78,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -86,7 +86,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>

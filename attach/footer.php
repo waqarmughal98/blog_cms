@@ -4,7 +4,7 @@
 				<div class="col-lg-3 col-md-6 col-sm-6 col-12">
 					<div class="blog_footer_div">
 						<div class="widget weidget_aboutus">
-							<img src="images/logo1.png" class="img-fluid" alt="">
+							<img src="images/logo2.png" class="img-fluid" alt="" style="width: 85%;">
 							<p>Lorem ipsum dolor sit etonsecti ietur adipisicing elit, sed do eiusmoempior incididunt ut labore et dolore aigneia aliqua Ut enim ad minim Lorem ipseum dolor sit ametonsectietur.</p>
 							<a href="#" class="blog_readmore">read more <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="6px"><path fill-rule="evenodd" fill="rgb(250, 191, 44)" d="M12.924,2.786 L10.035,0.042 C9.955,-0.026 9.867,-0.039 9.772,0.003 C9.677,0.045 9.629,0.120 9.629,0.230 L9.629,1.986 L0.242,1.986 C0.172,1.986 0.114,2.010 0.069,2.057 C0.024,2.104 0.001,2.164 0.001,2.237 L0.001,3.743 C0.001,3.816 0.024,3.876 0.069,3.923 C0.114,3.970 0.172,3.994 0.242,3.994 L9.629,3.994 L9.629,5.750 C9.629,5.854 9.677,5.930 9.772,5.977 C9.867,6.019 9.955,6.003 10.035,5.930 L12.924,3.154 C12.974,3.102 12.999,3.039 12.999,2.966 C12.999,2.899 12.974,2.839 12.924,2.786 Z"></path></svg></a>
 							<div class="blog_followus_div">
@@ -31,7 +31,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Does US Tax Overhaul Violate Global Trade.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Does US Tax Overhaul Violate Global Trade.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -42,7 +42,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -53,7 +53,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Take in your bag before going to hiking</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Take in your bag before going to hiking</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -70,7 +70,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -78,7 +78,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -86,7 +86,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>

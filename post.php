@@ -194,17 +194,40 @@
 								</div>
 							</div>
 							<ul>
+							<?php
+								$selectHot = "SELECT * FROM `posts` WHERE `tags` LIKE '%Hot topic%'";
+								$queries->query($selectHot);
+								if($queries->count() > 0):
+									while($getHot = $queries->fetch()):
+										$hotid = $getHot->id;
+										$hottitle = $getHot->title;
+										$hotdescription = $getHot->description;
+										$hotcategory = $getHot->category_id;
+										$hotsub_category = $getHot->sub_category_id;
+										$hotimage = $getHot->image;
+										$hotseo_url = $getHot->seo_url;
+										$hotdate = $getHot->date;
+										$hottags = $getHot->tags;
+										$hotauthor = $getHot->authors;
+
+										$hotimage = "/admin/uploads/".$hotimage;
+										$hotseo_urls = "post?post=".$seo_url;
+							?>
 								<li>
 									<div class="blog_recent_post">
 										<div class="blog_recent_post_img">
-											<img src="<?php echo $image; ?>" class="img-fluid" alt="">
+											<img src="<?php echo $hotimage; ?>" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="#"><?php echo $title; ?></a></h4>
-											<p><?php echo $date; ?> <a href="#">- <?php echo $category; ?></a></p>
+											<h4><a href="#"><?php echo $hottitle; ?></a></h4>
+											<p><?php echo $hotdate; ?> <a href="#">- <?php echo $hotcategory; ?></a></p>
 										</div>
 									</div>
 								</li>
+							<?php
+									endwhile;
+								endif;
+							?>
 							</ul>
 						</div>
 						<div class="widget widget_instagram_news wow fadeInUp">

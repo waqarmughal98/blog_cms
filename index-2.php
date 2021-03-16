@@ -114,14 +114,11 @@
 							<div class="blog_heading_div">
 								<h3 class="blog_bg_orange">Trading</h3>
 							</div>
-							<nav class="blog_tab_nav blog_color_orange">
+							<nav class="blog_tab_nav blog_color_orange" style="width: 100%;">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab" aria-selected="true">All</a>
+									<!-- <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab" aria-selected="true">All</a> -->
 								</div>
 							</nav>
-							<div class="tab_toggle_menu">
-								<a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="14px"><path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M0.001,10.115 L0.001,7.969 L13.000,7.969 L13.000,10.115 L0.001,10.115 ZM3.649,6.028 L3.649,3.881 L12.992,3.881 L12.992,6.028 L3.649,6.028 ZM0.001,-0.002 L13.000,-0.002 L13.000,2.145 L0.001,2.145 L0.001,-0.002 ZM12.992,13.998 L3.649,13.998 L3.649,11.853 L12.992,11.853 L12.992,13.998 Z"></path></svg></a>
-							</div>
 						</div>
 						<div class="tab-content">
 							<div class="tab-pane fade show active tabslider wow fadeInUp" id="nav-all" role="tabpanel"> 
@@ -342,7 +339,7 @@
 														<img src="<?php echo $image; ?>" class="img-fluid" alt="">
 													</div>
 													<div class="blog_post_style2_content">
-														<h3><a href="blog_single_with_sidebar.html"><?php echo $title; ?></a></h3>
+														<h3><a href="<?php echo $seo_url; ?>"><?php echo $title; ?></a></h3>
 														<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> <?php echo $author; ?></a></div> 
 														<ul class="blog_meta_tags">
 															<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -439,11 +436,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -454,11 +451,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -471,11 +468,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -486,11 +483,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -501,11 +498,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -518,11 +515,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -533,11 +530,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -550,11 +547,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -565,11 +562,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -580,11 +577,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -610,11 +607,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -625,11 +622,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -642,11 +639,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -657,11 +654,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -672,11 +669,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -689,11 +686,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -704,11 +701,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -721,11 +718,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -736,11 +733,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -751,11 +748,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -781,11 +778,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -796,11 +793,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -813,11 +810,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -828,11 +825,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -843,11 +840,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -860,11 +857,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -875,11 +872,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -892,11 +889,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -907,11 +904,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -922,11 +919,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -952,11 +949,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -967,11 +964,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -984,11 +981,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -999,11 +996,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1014,11 +1011,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1031,11 +1028,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1046,11 +1043,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1063,11 +1060,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1078,11 +1075,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1093,11 +1090,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1123,11 +1120,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1138,11 +1135,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1155,11 +1152,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1170,11 +1167,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1185,11 +1182,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1202,11 +1199,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1217,11 +1214,11 @@
 													</div>
 													<div class="blog_col_6">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/430x430" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Office Volunteers Needed To Answer And Help</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Office Volunteers Needed To Answer And Help</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1234,11 +1231,11 @@
 												<div class="swiper-slide">
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1249,11 +1246,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1264,11 +1261,11 @@
 													</div>
 													<div class="blog_col_4">
 														<div class="blog_post_slider_wrapper"> 
-															<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+															<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 																<img src="https://via.placeholder.com/280x280" class="img-fluid" alt="">
 															</a> 
 															<div class="blog_post_slider_content"> 
-																<h2><a href="blog_single_with_sidebar.html">Murals And Graffiti From Around The World</a></h2>
+																<h2><a href="<?php echo $seo_url; ?>">Murals And Graffiti From Around The World</a></h2>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1319,7 +1316,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1336,7 +1333,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1353,7 +1350,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1370,7 +1367,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1387,7 +1384,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1404,7 +1401,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1421,7 +1418,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1438,7 +1435,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1470,7 +1467,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1487,7 +1484,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1504,7 +1501,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1521,7 +1518,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1538,7 +1535,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1555,7 +1552,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1572,7 +1569,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1589,7 +1586,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1621,7 +1618,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1638,7 +1635,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1655,7 +1652,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1672,7 +1669,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1689,7 +1686,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1706,7 +1703,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1723,7 +1720,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1740,7 +1737,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1772,7 +1769,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1789,7 +1786,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1806,7 +1803,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1823,7 +1820,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1840,7 +1837,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1857,7 +1854,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1874,7 +1871,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1891,7 +1888,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1923,7 +1920,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1940,7 +1937,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1957,7 +1954,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1974,7 +1971,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -1991,7 +1988,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -2008,7 +2005,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -2025,7 +2022,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -2042,7 +2039,7 @@
 																<img src="https://via.placeholder.com/180x200" class="img-fluid" alt="">
 															</div>
 															<div class="blog_post_style2_content">
-																<h3><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h3>
+																<h3><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h3>
 																<div class="blog_author_data"><a href="#"><img src="https://via.placeholder.com/34x34" class="img-fluid" alt="" width="34" height="34"> John Doe</a></div> 
 																<ul class="blog_meta_tags">
 																	<li><span class="blog_bg_blue"><svg xmlns="http://www.w3.org/2000/svg" width="12px" height="7px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M11.829,3.074 C11.732,2.948 9.422,-0.000 6.468,-0.000 C3.514,-0.000 1.203,2.948 1.106,3.074 C0.916,3.320 0.916,3.678 1.106,3.925 C1.203,4.050 3.514,6.999 6.468,6.999 C9.422,6.999 11.732,4.050 11.829,3.925 C12.020,3.678 12.020,3.320 11.829,3.074 ZM7.370,1.771 C7.569,1.651 7.846,1.788 7.989,2.077 C8.132,2.366 8.087,2.696 7.888,2.816 C7.689,2.936 7.412,2.799 7.269,2.510 C7.126,2.221 7.171,1.890 7.370,1.771 ZM6.468,5.930 C4.404,5.930 2.668,4.183 2.067,3.499 C2.473,3.037 3.397,2.091 4.589,1.525 C4.357,1.915 4.220,2.381 4.220,2.883 C4.220,4.251 5.227,5.360 6.468,5.360 C7.709,5.360 8.715,4.251 8.715,2.883 C8.715,2.381 8.579,1.915 8.346,1.525 C9.539,2.091 10.463,3.037 10.869,3.499 C10.268,4.184 8.531,5.930 6.468,5.930 Z"/></svg> 21K</span></li> 
@@ -2131,7 +2128,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Does US Tax Overhaul Violate Global Trade.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Does US Tax Overhaul Violate Global Trade.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -2142,7 +2139,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">What should you take in your bag before going.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -2153,7 +2150,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Take in your bag before going to hiking</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Take in your bag before going to hiking</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -2164,7 +2161,7 @@
 											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="blog_single_with_sidebar.html">Your bag before going to parti hiking</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">Your bag before going to parti hiking</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 									</div>
@@ -2181,7 +2178,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 										<div class="blog_news_action">
@@ -2205,7 +2202,7 @@
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="blog_single_with_sidebar.html">LA Marathon is long distance running from the stadium.</a></h4>
+											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
 											<p>Sep 21,2018 <a href="#">- Sports</a></p>
 										</div>
 										<div class="blog_news_action">
@@ -2315,7 +2312,7 @@
 							<ul>
 								<li>
 									<div class="blog_post_slider_wrapper"> 
-										<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+										<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 											<img src="https://via.placeholder.com/240x220" class="img-fluid" alt=""> 
 										</a> 
 										<div class="blog_post_slider_content"> 
@@ -2329,7 +2326,7 @@
 								</li>
 								<li>
 									<div class="blog_post_slider_wrapper"> 
-										<a href="blog_single_with_sidebar.html" class="blog_post_slider_img"> 
+										<a href="<?php echo $seo_url; ?>" class="blog_post_slider_img"> 
 											<img src="https://via.placeholder.com/240x220" class="img-fluid" alt=""> 
 										</a> 
 										<div class="blog_post_slider_content"> 
