@@ -38,7 +38,7 @@
 							<li>You are here:</li>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="#">Blog</a></li>
-							<li class="active"><?php echo $category; ?></li>
+							<li class="active"><?php echo $post; ?></li>
 						</ol>
 					</div>
 				</div>
@@ -195,7 +195,7 @@
 							</div>
 							<ul>
 							<?php
-								$selectHot = "SELECT * FROM `posts` WHERE `tags` LIKE '%Hot topic%'";
+								$selectHot = "SELECT * FROM `posts` WHERE domain='$domain' AND `tags` LIKE '%Hot topic%'";
 								$queries->query($selectHot);
 								if($queries->count() > 0):
 									while($getHot = $queries->fetch()):
@@ -211,7 +211,7 @@
 										$hotauthor = $getHot->authors;
 
 										$hotimage = "/admin/uploads/".$hotimage;
-										$hotseo_urls = "post?post=".$seo_url;
+										$hotseo_url = "post?post=".$hotseo_url;
 							?>
 								<li>
 									<div class="blog_recent_post">
@@ -219,8 +219,8 @@
 											<img src="<?php echo $hotimage; ?>" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="#"><?php echo $hottitle; ?></a></h4>
-											<p><?php echo $hotdate; ?> <a href="#">- <?php echo $hotcategory; ?></a></p>
+											<h4><a href="<?php echo $hotseo_url; ?>"><?php echo $hottitle; ?></a></h4>
+											<p><?php echo $hotdate; ?> <a href="category?page=<?php echo $hotcategory; ?>">- <?php echo $hotcategory; ?></a></p>
 										</div>
 									</div>
 								</li>
