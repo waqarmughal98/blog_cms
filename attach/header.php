@@ -1,11 +1,11 @@
-<div id="blog_preloader_wrapper">
+<!-- <div id="blog_preloader_wrapper">
      <div id="blog_preloader_box">
           <div class="blog_loader">
               <div></div>
               <div></div>
           </div>
      </div>
-</div>
+</div> -->
 <div class="blog_main_wrapper">
 	<div class="blog_top_header_wrapper">
 		<div class="blog_tranding_div">

@@ -25,39 +25,44 @@
 						<div class="widget widget_recent_post">
 							<h3 class="widget-title">Recent News</h3>
 							<ul>
+							<?php
+								$selectRecent = "SELECT * FROM `posts` WHERE `domain`='$domain' AND `tags` LIKE '%Recent News%' LIMIT 3";
+								$queries->query($selectRecent);
+								if($queries->count() > 0):
+									while($recent = $queries->fetch()):
+										$id = $recent->id;
+										$title = $recent->title;
+										$description = $recent->description;
+										$category = $recent->category_id;
+										$sub_category = $recent->sub_category_id;
+										$image = $recent->image;
+										$seo_url = $recent->seo_url;
+										$date = $recent->date;
+										$tags = $recent->tags;
+										$author = $recent->authors;
+
+										$image = "admin/uploads/".$image;
+						
+										if (strlen($description) > 50){
+   											$description = substr($description, 0, 50) . '...';
+										}
+										$seo_url = "post?post=".$seo_url;
+							?>
 								<li>
 									<div class="blog_recent_post">
 										<div class="blog_recent_post_img">
-											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
+											<img src="<?php echo $image; ?>" class="img-fluid" alt="">
 										</div>
 										<div class="blog_recent_post_content">
-											<h4><a href="<?php echo $seo_url; ?>">Does US Tax Overhaul Violate Global Trade.</a></h4>
-											<p>Sep 21,2018 <a href="#">- Sports</a></p>
+											<h4><a href="<?php echo $seo_url; ?>"><?php echo $title; ?></a></h4>
+											<p><?php echo $date; ?> <a href="category?page=<?php echo $category; ?>">- <?php echo $category; ?></a></p>
 										</div>
 									</div>
 								</li>
-								<li>
-									<div class="blog_recent_post">
-										<div class="blog_recent_post_img">
-											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
-										</div>
-										<div class="blog_recent_post_content">
-											<h4><a href="<?php echo $seo_url; ?>">What should you take in your bag before going.</a></h4>
-											<p>Sep 21,2018 <a href="#">- Sports</a></p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="blog_recent_post">
-										<div class="blog_recent_post_img">
-											<img src="https://via.placeholder.com/50x50" class="img-fluid" alt="">
-										</div>
-										<div class="blog_recent_post_content">
-											<h4><a href="<?php echo $seo_url; ?>">Take in your bag before going to hiking</a></h4>
-											<p>Sep 21,2018 <a href="#">- Sports</a></p>
-										</div>
-									</div>
-								</li>
+							<?php
+									endwhile;
+								endif;
+							?>
 							</ul>
 						</div>
 					</div>
@@ -67,30 +72,41 @@
 						<div class="widget widget_recent_news">
 							<h3 class="widget-title">Popular Post</h3>
 							<ul>
+							<?php
+								$getPopular = "SELECT * FROM `posts` WHERE `domain`='$domain' AND `tags` LIKE '%Popular Post%' LIMIT 3";
+								$queries->query($getPopular);
+								if($queries->count() > 0):
+									while($getPop = $queries->fetch()):
+										$id = $getPop->id;
+										$title = $getPop->title;
+										$description = $getPop->description;
+										$category = $getPop->category_id;
+										$sub_category = $getPop->sub_category_id;
+										$image = $getPop->image;
+										$seo_url = $getPop->seo_url;
+										$date = $getPop->date;
+										$tags = $getPop->tags;
+										$author = $getPop->authors;
+
+										$image = "admin/uploads/".$image;
+						
+										if (strlen($description) > 50){
+   											$description = substr($description, 0, 50) . '...';
+										}
+										$seo_url = "post?post=".$seo_url;
+							?>
 								<li>
 									<div class="blog_news">
 										<div class="blog_news_title">
-											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
-											<p>Sep 21,2018 <a href="#">- Sports</a></p>
+											<h4><a href="<?php echo $seo_url; ?>"><?php echo $title; ?></a></h4>
+											<p><?php echo $date; ?> <a href="category?page=<?php echo $category; ?>">- <?php echo $category; ?></a></p>
 										</div>
 									</div>
 								</li>
-								<li>
-									<div class="blog_news">
-										<div class="blog_news_title">
-											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
-											<p>Sep 21,2018 <a href="#">- Sports</a></p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="blog_news">
-										<div class="blog_news_title">
-											<h4><a href="<?php echo $seo_url; ?>">LA Marathon is long distance running from the stadium.</a></h4>
-											<p>Sep 21,2018 <a href="#">- Sports</a></p>
-										</div>
-									</div>
-								</li>
+							<?php
+									endwhile;
+								endif;
+							?>
 							</ul>
 						</div>
 					</div>
