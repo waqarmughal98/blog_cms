@@ -2,8 +2,8 @@
 // Connection File
 require_once("admin/assets/config/config.php");
 require_once("admin/assets/config/queries.php");
-// require_once("assets/config/validation.php");
-// require_once("assets/config/sendemail.php");
+require_once("admin/assets/config/validation.php");
+require_once("admin/assets/config/sendemail.php");
 session_start();
 ob_start();
 $queries = new Queries;
@@ -39,5 +39,6 @@ error_reporting(E_ALL);
     <link rel="stylesheet" type="text/css" href="pcw/assets/css/style.css" />
     <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- Favicon Link -->
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">

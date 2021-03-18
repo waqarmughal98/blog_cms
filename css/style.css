@@ -4706,6 +4706,7 @@ body.right_toggle_open .blog_right_toggle_sidebar .blog_togglediv {
 /* } */
 .blog_banner_slider .swiper-container.gallery-thumbs .swiper-slide .blog_post_slider_wrapper .blog_post_slider_img{
 	display:inline-block;
+    width: 100%;
 }
 .blog_banner_slider .swiper-container.gallery-thumbs .swiper-slide, .blog_banner_slider .swiper-container.gallery-thumbs .swiper-slide .blog_post_slider_wrapper .blog_post_slider_img img {
    height: 200px;
@@ -7245,4 +7246,9 @@ body.homepage2.single_with_sidebar .col-lg-3.col-md-12.col-sm-12.col-12.theiaSti
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+.login {
+    padding: 15px;
+    color: #333;
+    cursor: pointer;
 }

@@ -9,7 +9,7 @@
 <div class="blog_main_wrapper">
 	<div class="blog_top_header_wrapper">
 		<div class="blog_tranding_div">
-			<h5>Trending News</h5>
+			<h5>Today Rates</h5>
 		</div>
 		<div class="blog_tranding_slider">
 			<crypto-widget type="ticker-quotes" template="basic" color="white" assets="BTC~USD,ETH~USD,LTC~USD,DASH~USD,XRP~USD,USDT~USD,ETC~USD,BTG~USD,XMR~USD" speed="100" direction="left" pause="true" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget>
@@ -33,7 +33,7 @@
 		<div class="blog_main_menu">
 			<div class="blog_main_menu_innerdiv">
 				<ul>
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="index">Home</a></li>
 					<?php
                     $selectcat = "SELECT * FROM `categories` WHERE domain='$domain' AND `pid`=0";
                     $queries->query($selectcat);
@@ -79,25 +79,42 @@
 					<li><a href="lifestyle.html">lifestyle</a></li>
 					<li><a href="travel.html">Travel</a></li>
 					<li><a href="fashion.html">Fashion <span>new</span></a></li> -->
-					<li><a href="#">pages</a>
+					<!-- <li><a href="#">pages</a>
 						<ul class="sub-menu">
 							<li><a href="blog_single_fullwidth.html">Blog Single FullWidth</a></li>
-							<li><a href="<?php echo $seo_url; ?>">Blog Single With Sidebar</a></li>
+							<li><a href="">Blog Single With Sidebar</a></li>
 							<li><a href="contactus.html">contact</a></li>
 							<li><a href="error.html">Error</a></li>
 						</ul>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
+		<?php
+			if(isset($_SESSION['userCode'])):
+		?>
+		<div class="login">
+			<a href="/logout"><i class="fa fa-sign-out" style="font-size:20px;padding-right: 10px;"></i> Logout</a>
+		</div>
+		<?php else: ?>
+		<div class="login">
+			<a href="/login"><i class="fa fa-user" style="font-size:22px;padding-right: 10px;"></i> Login</a>
+		</div>
+		<?php endif; ?>
 		<div class="blog_top_search">
-			<form class="form-inline">
+			<form class="form-inline" action="" method="post">
 				<div class="blog_form_group">
-					<input type="text" class="form-control" placeholder="Search Here...">
+					<input type="text" name="search" class="form-control" placeholder="Search Here...">
 				</div>
-				<button type="button" class="blog_header_search"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"><path fill-rule="evenodd"  fill="rgb(250, 191, 44)" d="M15.750,14.573 L11.807,10.612 C12.821,9.449 13.376,7.984 13.376,6.459 C13.376,2.898 10.376,-0.000 6.687,-0.000 C2.999,-0.000 -0.002,2.898 -0.002,6.459 C-0.002,10.021 2.999,12.919 6.687,12.919 C8.072,12.919 9.391,12.516 10.520,11.750 L14.493,15.741 C14.659,15.907 14.882,15.999 15.121,15.999 C15.348,15.999 15.563,15.916 15.726,15.764 C16.073,15.442 16.084,14.908 15.750,14.573 ZM6.687,1.685 C9.414,1.685 11.631,3.827 11.631,6.459 C11.631,9.092 9.414,11.234 6.687,11.234 C3.961,11.234 1.743,9.092 1.743,6.459 C1.743,3.827 3.961,1.685 6.687,1.685 Z"/></svg></button>
+				<button type="submit" name="submitsearch" class="blog_header_search"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"><path fill-rule="evenodd"  fill="rgb(250, 191, 44)" d="M15.750,14.573 L11.807,10.612 C12.821,9.449 13.376,7.984 13.376,6.459 C13.376,2.898 10.376,-0.000 6.687,-0.000 C2.999,-0.000 -0.002,2.898 -0.002,6.459 C-0.002,10.021 2.999,12.919 6.687,12.919 C8.072,12.919 9.391,12.516 10.520,11.750 L14.493,15.741 C14.659,15.907 14.882,15.999 15.121,15.999 C15.348,15.999 15.563,15.916 15.726,15.764 C16.073,15.442 16.084,14.908 15.750,14.573 ZM6.687,1.685 C9.414,1.685 11.631,3.827 11.631,6.459 C11.631,9.092 9.414,11.234 6.687,11.234 C3.961,11.234 1.743,9.092 1.743,6.459 C1.743,3.827 3.961,1.685 6.687,1.685 Z"/></svg></button>
 			</form>
 		</div>
+		<?php
+			if(isset($_POST['submitsearch'])):
+				$search = $_POST['search'];
+				echo "<script>window.location = '/search?search=$search';</script>";
+			endif;
+		?>
 	</div>
 	<?php
 	// $url = 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
