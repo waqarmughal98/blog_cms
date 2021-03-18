@@ -69,10 +69,10 @@
 													<input type="email" class="form-control" required="" id="exampleInputEmail_2" placeholder="Enter email">
 												</div>
 												<div class="form-group">
-													<label class="pull-left control-label mb-10" for="exampleInputpwd_2">Password</label>
+													<label class="pull-left control-label mb-10" for="exampleInputpassword_2">Password</label>
 													<a class="capitalize-font txt-primary block mb-10 pull-right font-12" href="forgot-password.html">forgot password ?</a>
 													<div class="clearfix"></div>
-													<input type="password" class="form-control" required="" id="exampleInputpwd_2" placeholder="Enter password">
+													<input type="password" class="form-control" required="" id="exampleInputpassword_2" placeholder="Enter password">
 												</div>
 												
 												<div class="form-group">
