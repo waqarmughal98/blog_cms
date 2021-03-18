@@ -136,7 +136,7 @@
 
 				<div class="col-lg-3 col-md-12 col-sm-12 col-12 theiaStickySidebar">
 					<div class="blog_sidebar">
-						<div class="widget widget_social wow fadeInUp">
+					<div class="widget widget_social wow fadeInUp">
 							<div class="blog_main_heading_div">
 								<div class="blog_heading_div">
 									<h3 class="blog_bg_pink">CONNECT</h3>
@@ -145,44 +145,48 @@
 							<ul>
 								<li>
 									<div class="widget_social_link">
-										<i class="fa fa-facebook"></i>
-										<h2>62.5K</h2>
-										<p>Followers</p>
+										<a href="https://www.facebook.com/crypto.inject">
+											<i class="fa fa-facebook"></i>
+										</a>
+										<p>Facebook</p>
 									</div>
 								</li>
 								<li>
 									<div class="widget_social_link">
-										<i class="fa fa-twitter"></i>
-										<h2>62K</h2>
-										<p>Followers</p>
+										<a href="https://twitter.com/CryptoInject">
+											<i class="fa fa-twitter"></i>
+										</a>
+										<p>Twitter</p>
 									</div>
 								</li>
 								<li>
 									<div class="widget_social_link">
+										<a href="https://www.youtube.com/channel/UCcTJFRsLQe0k7-JVFt1IHkQ">
 										<i class="fa fa-youtube-play"></i>
-										<h2>45K</h2>
-										<p>Followers</p>
+										</a>
+										<p>Youtube</p>
 									</div>
 								</li>
 								<li>
 									<div class="widget_social_link">
+										<a href="https://www.instagram.com/crypto_inject/">
 										<i class="fa fa-instagram"></i>
-										<h2>62.5K</h2>
-										<p>Followers</p>
+										</a>
+										<p>Instagram</p>
 									</div>
 								</li>
 								<li>
 									<div class="widget_social_link">
+										<a href="https://www.pinterest.it/cryptoinject/_saved/">
 										<i class="fa fa-pinterest-p"></i>
-										<h2>62K</h2>
-										<p>Followers</p>
+										</a>
+										<p>Pinterest</p>
 									</div>
 								</li>
 								<li>
 									<div class="widget_social_link">
-										<i class="fa fa-rss"></i>
-										<h2>45K</h2>
-										<p>Followers</p>
+										<i class="fa fa-telegram"></i>
+										<p>Telegram</p>
 									</div>
 								</li>
 							</ul>
@@ -338,11 +342,25 @@
 							<?php
 								if(isset($_POST['submitMail'])):
 									$email = $_POST['email'];
-									$date = date("d-F-Y");
-									$insertEmail = "INSERT INTO `newsletter` (`email`, `date`, `domain`) VALUES (?,?,?)";
-									$params = [$email,$date,$domain];
-									if($queries->query($insertEmail, $params)):
-										echo ('<script>alert("Thanks For Subscribing to our Newsletter");</script>');
+									$date = $date = date("d-F-Y");
+									$getNewsltter = "SELECT * FROM `newsletter` WHERE `email`='$email'";
+									$queries->query($getNewsltter);
+									if($queries->count() > 0):
+										echo ('<script>
+										Swal.fire({
+											title: "Email already Exist in our Newsletter!",
+											icon: "error"
+										  });</script>');
+									else:
+										$insertEmail = "INSERT INTO `newsletter` (`email`, `date`, `domain`) VALUES (?,?,?)";
+										$params = [$email,$date,$domain];
+										if($queries->query($insertEmail, $params)):
+											echo ('<script>
+											Swal.fire({
+												title: "Thanks For Subscribing to our Newsletter!",
+												icon: "success"
+											  });</script>');
+										endif;
 									endif;
 								endif;
 							?>
