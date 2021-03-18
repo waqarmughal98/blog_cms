@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>Cryptoinject</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm" />
-		<meta name="author" content="IDC"/>
+		<title>Droopy I Fast build Admin dashboard for any platform</title>
+		<meta name="description" content="Droopy is a Dashboard & Admin Site Responsive Template by hencework." />
+		<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Droopy Admin, Droopyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+		<meta name="author" content="hencework"/>
 		
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="favicon.ico">
@@ -19,7 +19,19 @@
 		
 		<!-- Custom CSS -->
 		<link href="dist/css/style.css" rel="stylesheet" type="text/css">
-	</head>
+		<style>
+			/* Background image of body */ 
+			.page-wrapper.auth-page {
+				background-image: url("../../img/r0gHaKpr8l.jpg");
+				/* Full height */
+				height: 100%; 
+				/* Center and scale the image nicely */
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		</style>
+	</head> 
 	<body>
 		<!--Preloader-->
 		<div class="preloader-it">
@@ -29,16 +41,6 @@
 		
 		<div class="wrapper  pa-0">
 			<header class="sp-header">
-				<div class="sp-logo-wrap pull-left">
-					<a href="index.html">
-						<img class="brand-img mr-10" src="../img/logo.png" alt="brand"/>
-						<span class="brand-text">Droopy</span>
-					</a>
-				</div>
-				<div class="form-group mb-0 pull-right">
-					<span class="inline-block pr-10">Don't have an account?</span>
-					<a class="inline-block btn btn-success  btn-rounded btn-outline" href="signup.html">Sign Up</a>
-				</div>
 				<div class="clearfix"></div>
 			</header>
 			
@@ -51,9 +53,14 @@
 							<div class="auth-form  ml-auto mr-auto no-float">
 								<div class="row">
 									<div class="col-sm-12 col-xs-12">
-										<div class="mb-30">
-											<h3 class="text-center txt-dark mb-10">Sign in to Droopy</h3>
-											<h6 class="text-center nonecase-font txt-grey">Enter your details below</h6>
+										<div class="sp-logo-wrap text-center mt-20  mb-20">
+											<a href="index.html">
+												<img class="brand-img mr-10" src="../img/logo.png" alt="brand"/>
+												<span class="brand-text">Droopy</span>
+											</a>
+										</div>
+										<div class="mb-30 ">
+											<h3 class="text-center mb-10">Sign in to Cryptoinject</h3>
 										</div>	
 										<div class="form-wrap">
 											<form action="#">
@@ -72,6 +79,9 @@
 													<div class="checkbox checkbox-primary pr-10 pull-left">
 														<input id="checkbox_2" required="" type="checkbox">
 														<label for="checkbox_2"> Keep me logged in</label>
+													</div>
+													<div class="pull-right">
+														<a class="inline-block mr-10 mt-5" href="signup.html">Don't have an account?</a>
 													</div>
 													<div class="clearfix"></div>
 												</div>
