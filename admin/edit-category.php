@@ -43,13 +43,8 @@
                             $queries->query($getPage);
                             if($queries->count() > 0):
                                 while($row = $queries->fetch()):
-                                    $title = $row->page_title;
-                                    $meta_title = $row->meta_title;
-                                    $meta_description = $row->meta_description;
-                                    $description = $row->body;
-                                    $tags = $row->tags;
-                                    $status = $row->status;
-                                    $seo_url = $row->seo_url;
+                                    $category_name = $row->category_name;
+                                    $seo_url  = $row->seo_url;
                     ?>
 					
 					<!-- Row -->
@@ -60,27 +55,27 @@
 									<div class="panel-body">
 										<div class="form-wrap">
 											<form action="" method="post" enctype="multipart/form-data"> 
-												<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-info-outline mr-10"></i>about page</h6>
+												<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-info-outline mr-10"></i>about category</h6>
 												<hr class="light-grey-hr"/>
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="control-label mb-10">Category Name</label>
-															<input type="text" id="title" name="page_name" class="form-control" placeholder="Enter your title" value="<?php echo $title; ?>">
+															<input type="text" id="title" name="category_name" class="form-control" placeholder="Enter your title" value="<?php echo $category_name; ?>">
 														</div>
 													</div>
 													<!--/span-->
 													<div class="col-md-6">
 														<div class="form-group">
-															<label class="control-label mb-10">Meta title</label>
-															<input type="text" id="meta_title" name="meta_title" class="form-control" placeholder="Enter your Meta title" value="<?php echo $meta_title; ?>">
+															<label class="control-label mb-10">SEO Url</label>
+															<input type="text" id="meta_title" name="seo_url" class="form-control" placeholder="Enter your seo url" value="<?php echo $seo_url; ?>">
 														</div>
 													</div>
 													<!--/span-->
 												</div>
 												<hr class="light-grey-hr"/>
 												<div class="form-actions">
-													<button class="btn btn-success" type="submit" name="publish"> <i class="fa fa-check"></i> <span>Publish</span></button>
+													<button class="btn btn-success" type="submit" name="publish"> <i class="fa fa-check"></i> <span>Update</span></button>
 													<div class="clearfix"></div>
 												</div>
 											</form>
@@ -97,12 +92,7 @@
                             endif;
                         endif;
 						if(isset($_POST['publish'])):
-							$page_name = htmlentities($_POST['page_name']);
-							$meta_title = htmlentities($_POST['meta_title']);
-							$meta_description = htmlentities($_POST['meta_description']);
-							$body = $_POST['body'];
-							$tags = $_POST['tags'];
-							$status = $_POST['radio'];
+							$category_name = $_POST['category_name'];
 							
 							// Seo Url
                             $seoUrl = $_POST['seo_url'];
@@ -122,20 +112,18 @@
                             $url = seoUrl($seoUrl);
 							
 							// Validate Seo Url
-                            $checkUrl = "SELECT * FROM pages WHERE seo_url='$url' AND id!='$pageId'";
+                            $checkUrl = "SELECT * FROM `categories` WHERE seo_url='$url' AND id!='$pageId'";
                             $queries->query($checkUrl);
                             if($queries->count() > 0):
                                 echo("<script> alert('Url is alredy exist, Please try another Url'); </script>");
                                 exit();
                             endif;
-							//date
-							$date = date("l-d-m-y");
 
-							$insertBlog = "UPDATE pages SET `page_title`='$page_name', `meta_title`='$meta_title', `meta_description`='$meta_description', `body`='$body', `tags`='$tags', `status`='$status', `seo_url`='$url', `domain`='$domain', `date`='$date'";
+							$insertBlog = "UPDATE `categories` SET `category_name`='$category_name', `seo_url`='$url' WHERE id='$pageId' AND domain='$domain'";
 							if($queries->query($insertBlog)):
-								echo '<script>alert("Page Updated!");</script>';
+								echo '<script>alert("Category Updated!");</script>';
 							endif;
-							echo("<script> window.open('all-pages.php','_self'); </script>");
+							echo("<script> window.open('all-categories.php','_self'); </script>");
 						endif;
 					?>
 

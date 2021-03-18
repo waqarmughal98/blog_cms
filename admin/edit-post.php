@@ -197,7 +197,7 @@
 												</div>
 												<hr class="light-grey-hr"/>
 												<div class="form-actions">
-													<button class="btn btn-success" type="submit" name="publish"> <i class="fa fa-check"></i> <span>Publish</span></button>
+													<button class="btn btn-success" type="submit" name="publish"> <i class="fa fa-check"></i> <span>Update</span></button>
 													<div class="clearfix"></div>
 												</div>
 											</form>

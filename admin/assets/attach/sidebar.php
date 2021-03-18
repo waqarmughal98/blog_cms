@@ -23,12 +23,6 @@
 					<li class="dropdown auth-drp">
 						<a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="../img/user1.png" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
 						<ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
-							<li>
-								<a href="profile.html"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
-							</li>
-							<li>
-								<a href="#"><i class="zmdi zmdi-settings"></i><span>Settings</span></a>
-							</li>
 							<li class="divider"></li>
 							<li>
 								<a href="#"><i class="zmdi zmdi-power"></i><span>Log Out</span></a>
@@ -48,7 +42,7 @@
 					<i class="zmdi zmdi-more"></i>
 				</li>
 				<li>
-					<a class="active" href="/admin/index" data-toggle="collapse"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="clearfix"></div></a>
+					<a class="active" href="index" data-toggle="collapse"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="clearfix"></div></a>
 				</li>
 				<li>
 					<a href="/admin/add-category"><div class="pull-left"><i class="fa fa-list-alt mr-20"></i><span class="right-nav-text">Add Category</span></div><div class="clearfix"></div></a>
@@ -104,6 +98,9 @@
 				</li>
 				<li>
 					<a href="all-media"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Media</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+				</li>
+				<li>
+					<a href="all-categories"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Categories</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
 				</li>
 				<!-- <li><hr class="light-grey-hr mb-10"/></li>
 				<li class="navigation-header">
