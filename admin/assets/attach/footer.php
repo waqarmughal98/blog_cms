@@ -26,6 +26,8 @@
 	
     <!-- jQuery -->
     <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

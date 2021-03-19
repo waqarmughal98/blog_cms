@@ -234,69 +234,7 @@
 							?>
 							</ul>
 						</div>
-						<div class="widget widget_instagram_news wow fadeInUp">
-							<div class="blog_main_heading_div">
-								<div class="blog_heading_div">
-									<h3 class="blog_bg_pink">Instagram</h3>
-								</div>
-							</div>
-							<ul>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-								<li>
-									<a href="#"><img src="https://via.placeholder.com/75x75" class=
-									"img-fluid" alt=""></a>
-									<div class="blog_overlay"></div>
-									<div class="blog_overlay_btndiv"><a href="images/slider1.jpg" class="fa fa-search blog_popup"></a></div>
-								</li>
-							</ul>
-						</div>
+						
 						<div class="widget widget_categories wow fadeInUp">
 							<div class="blog_main_heading_div">
 								<div class="blog_heading_div">
@@ -339,31 +277,6 @@
 									<button class="blog_newsletter_btn" type="submit" name="submitMail"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="16px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M16.914,0.038 C16.838,-0.030 16.731,-0.046 16.639,-0.002 L0.147,7.802 C0.058,7.844 0.001,7.934 0.000,8.034 C-0.001,8.134 0.054,8.225 0.142,8.269 L4.810,10.602 C4.895,10.645 4.997,10.635 5.074,10.577 L9.611,7.123 L6.049,10.855 C5.998,10.908 5.972,10.981 5.978,11.055 L6.333,15.760 C6.340,15.864 6.409,15.953 6.507,15.986 C6.533,15.994 6.560,15.999 6.586,15.999 C6.659,15.999 6.729,15.967 6.778,15.909 L9.256,12.986 L12.318,14.476 C12.384,14.508 12.461,14.509 12.529,14.480 C12.597,14.449 12.648,14.391 12.670,14.320 L16.989,0.310 C17.019,0.212 16.990,0.105 16.914,0.038 Z"/></svg></button>
 								</form>
 							</div>
-							<?php
-								if(isset($_POST['submitMail'])):
-									$email = $_POST['email'];
-									$date = $date = date("d-F-Y");
-									$getNewsltter = "SELECT * FROM `newsletter` WHERE `email`='$email'";
-									$queries->query($getNewsltter);
-									if($queries->count() > 0):
-										echo ('<script>
-										Swal.fire({
-											title: "Email already Exist in our Newsletter!",
-											icon: "error"
-										  });</script>');
-									else:
-										$insertEmail = "INSERT INTO `newsletter` (`email`, `date`, `domain`) VALUES (?,?,?)";
-										$params = [$email,$date,$domain];
-										if($queries->query($insertEmail, $params)):
-											echo ('<script>
-											Swal.fire({
-												title: "Thanks For Subscribing to our Newsletter!",
-												icon: "success"
-											  });</script>');
-										endif;
-									endif;
-								endif;
-							?>
 						</div>
 						<div class="ads_widget wow fadeInUp">
 							<a href="#"><img src="https://via.placeholder.com/280x350?text=Ads%20Area" class="img-fluid" alt=""></a>

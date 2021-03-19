@@ -757,7 +757,7 @@
 							?>
 							</ul>
 						</div>
-						<div class="widget widget_instagram_news wow fadeInUp">
+						<!-- <div class="widget widget_instagram_news wow fadeInUp">
 							<div class="blog_main_heading_div">
 								<div class="blog_heading_div">
 									<h3 class="blog_bg_pink">Instagram</h3>
@@ -819,7 +819,7 @@
 									<div class="blog_overlay_btndiv"><a href="images/placehold.jpg" class="fa fa-search blog_popup"></a></div>
 								</li>
 							</ul>
-						</div>
+						</div> -->
 						<div class="widget widget_categories wow fadeInUp">
 							<div class="blog_main_heading_div">
 								<div class="blog_heading_div">
@@ -915,31 +915,6 @@
 						<div class="ads_widget wow fadeInUp">
 							<a href="#"><img src="https://via.placeholder.com/280x350?text=Ads%20Area" class="img-fluid" alt=""></a>
 						</div>
-						<?php
-							if(isset($_POST['submitMail'])):
-								$email = $_POST['email'];
-								$date = $date = date("d-F-Y");
-								$getNewsltter = "SELECT * FROM `newsletter` WHERE `email`='$email'";
-								$queries->query($getNewsltter);
-								if($queries->count() > 0):
-									echo ('<script>
-									Swal.fire({
-										title: "Email already Exist in our Newsletter!",
-										icon: "error"
-									  });</script>');
-								else:
-									$insertEmail = "INSERT INTO `newsletter` (`email`, `date`, `domain`) VALUES (?,?,?)";
-									$params = [$email,$date,$domain];
-									if($queries->query($insertEmail, $params)):
-										echo ('<script>
-										Swal.fire({
-											title: "Thanks For Subscribing to our Newsletter!",
-											icon: "success"
-										  });</script>');
-									endif;
-								endif;
-							endif;
-						?>
 					</div>
 				</div>
 			</div>

@@ -13,6 +13,7 @@ $domain = "cryptoinject.com";
 ini_set('display_errors', 0);
 ini_set('display_startup_errors', 0);
 error_reporting(E_ALL);
+
 ?>
 
 <!DOCTYPE html>
@@ -37,3 +38,4 @@ error_reporting(E_ALL);
 	
 	<!-- Custom CSS -->
 	<link href="dist/css/style.css" rel="stylesheet" type="text/css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>

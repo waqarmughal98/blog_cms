@@ -265,7 +265,7 @@
 								$imageName1 = $_POST['old-featured'];
 							endif;
 
-							$insertBlog = "UPDATE posts SET `title`='$title' , `description`='$description', `meta_title`='$meta_title', `meta_description`='$meta_description', `category_id`='$category', `sub_category_id`=NULL, `image`='$imageName1' , `seo_url`='$url', `date`='$date', `tags`='$tags',`authors`='$author',`status`='$status' WHERE `domain`='$domain' AND `id`='$gid'";
+							$insertBlog = "UPDATE `posts` SET `title`='$title' , `description`='$description', `meta_title`='$meta_title', `meta_description`='$meta_description', `category_id`='$category', `sub_category_id`=NULL, `image`='$imageName1' , `seo_url`='$url', `date`='$date', `tags`='$tags',`authors`='$author',`status`='$status' WHERE `domain`='$domain' AND `id`='$gid'";
 							if($queries->query($insertBlog)):
 								echo '<script>alert("Post Updated!");</script>';
 							endif;

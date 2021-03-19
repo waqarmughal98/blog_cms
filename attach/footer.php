@@ -124,7 +124,7 @@
 									<button type="submit" name="submitMail" class="blog_newsletter_btn"><svg xmlns="http://www.w3.org/2000/svg" width="17px" height="16px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M16.914,0.038 C16.838,-0.030 16.731,-0.046 16.639,-0.002 L0.147,7.802 C0.058,7.844 0.001,7.934 0.000,8.034 C-0.001,8.134 0.054,8.225 0.142,8.269 L4.810,10.602 C4.895,10.645 4.997,10.635 5.074,10.577 L9.611,7.123 L6.049,10.855 C5.998,10.908 5.972,10.981 5.978,11.055 L6.333,15.760 C6.340,15.864 6.409,15.953 6.507,15.986 C6.533,15.994 6.560,15.999 6.586,15.999 C6.659,15.999 6.729,15.967 6.778,15.909 L9.256,12.986 L12.318,14.476 C12.384,14.508 12.461,14.509 12.529,14.480 C12.597,14.449 12.648,14.391 12.670,14.320 L16.989,0.310 C17.019,0.212 16.990,0.105 16.914,0.038 Z"/></svg></button>
 								</form>
 							</div>
-							<p>512 Margoa Center Raod, Los Angeles, California,wh1200-124<a href="mailto:info@cryptoinject.com">info@cryptoinject.com</a> 1800-145-1547</p>
+							<p><a href="mailto:info@cryptoinject.com">info@cryptoinject.com</a></p>
 						</div>
 					</div>
 				</div>
@@ -165,7 +165,7 @@
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12">
 					<ul class="blog_footer_menu">
 						<li><a href="about.html">About</a></li>
-						<li><a href="contactus.html">Contact</a></li>
+						<!-- <li><a href="contactus.html">Contact</a></li> -->
 						<li><a href="terms_condition.html">Terms Of Services</a></li>
 						<li><a href="privacy_policy.html">Privacy Policy</a></li>
 					</ul>

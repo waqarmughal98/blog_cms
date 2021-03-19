@@ -17,10 +17,9 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="blog_breadcrumb_div">
-						<h3><?php echo $search; ?></h3>
+						<h3>Result : <?php echo $search; ?></h3>
 						<ol class="breadcrumb">
-							<li>You are here:</li>
-							<li><a href="index.html">Home</a></li>
+							<li>You Searched:</li>
 							<li><?php echo $search; ?></li>
 						</ol>
 					</div>
@@ -122,6 +121,8 @@
 							</div>
 							<?php
 								endforeach;
+							else:
+								echo"<h1>No Result Found!</h2>";
 							endif;
 							?>
 						</div>

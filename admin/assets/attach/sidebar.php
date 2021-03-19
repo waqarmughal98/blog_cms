@@ -3,6 +3,14 @@
 		<div class="la-anim-1"></div>
 	</div> -->
 	<!-- /Preloader -->
+	<?php
+	if(isset($_SESSION['userId'])):
+		$domain = $_SESSION['domain'];
+		$user = $_SESSION['userId'];
+	else:
+		header("location: login.php");
+	endif;
+	?>
     <div class="wrapper  theme-1-active pimary-color-green">
 		<!-- Top Menu Items -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -23,9 +31,8 @@
 					<li class="dropdown auth-drp">
 						<a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="../img/user1.png" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
 						<ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
-							<li class="divider"></li>
 							<li>
-								<a href="#"><i class="zmdi zmdi-power"></i><span>Log Out</span></a>
+								<a href="logout"><i class="zmdi zmdi-power"></i><span>Log Out</span></a>
 							</li>
 						</ul>
 					</li>
@@ -58,6 +65,9 @@
 				</li>
 				<li>
 					<a href="/admin/add-new-page"><div class="pull-left"><i class="fa fa-pencil-square-o mr-20"></i><span class="right-nav-text">Add Pages</span></div><div class="clearfix"></div></a>
+				</li>
+				<li>
+					<a href="/admin/add-new-user"><div class="pull-left"><i class="fa fa-pencil-square-o mr-20"></i><span class="right-nav-text">Add New User</span></div><div class="clearfix"></div></a>
 				</li>
 				<!-- <li>
 					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">E-Commerce</span></div><div class="pull-right"><span class="label label-success">hot</span></div><div class="clearfix"></div></a>
@@ -101,6 +111,9 @@
 				</li>
 				<li>
 					<a href="all-categories"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">All Categories</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+				</li>
+				<li>
+					<a href="newsletter"><div class="pull-left"><i class="fa fa-files-o mr-20"></i><span class="right-nav-text">Newsletter</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
 				</li>
 				<!-- <li><hr class="light-grey-hr mb-10"/></li>
 				<li class="navigation-header">
