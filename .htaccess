@@ -7,4 +7,9 @@ RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
 # Custom Error Pages
 # RewriteEngine on
-# ErrorDocument 404 https://yoursitename.com/404page.php
+# ErrorDocument 404 https://cryptoinject.com/error.php
+
+# HTTPS To HTTPS
+# RewriteEngine On
+# RewriteCond %{SERVER_PORT} 80
+# RewriteRule ^(.*)$ https://www.cryptoinject.com/$1 [R,L]
