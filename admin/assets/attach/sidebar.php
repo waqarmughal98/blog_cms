@@ -5,7 +5,6 @@
 	<!-- /Preloader -->
 	<?php
 	if(isset($_SESSION['userId'])):
-		$domain = $_SESSION['domain'];
 		$user = $_SESSION['userId'];
 	else:
 		header("location: login.php");
